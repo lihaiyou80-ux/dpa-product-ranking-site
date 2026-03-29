@@ -55,6 +55,48 @@
       line-height: 1.7;
       font-size: 15px;
     }
+    .date-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+      padding: 12px 16px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+    .update-date {
+      font-size: 14px;
+      color: var(--text);
+    }
+    .update-date strong {
+      color: var(--gold);
+      font-size: 15px;
+    }
+    .history-select {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .history-select label {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .history-select select {
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .history-select select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
     .summary {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -311,6 +353,15 @@
     <section class="hero">
       <h1>珠宝配饰行业跑品榜单</h1>
       <p>每周一、三、五更新榜单</p>
+      <div class="date-bar">
+        <span class="update-date">📅 数据更新日期：<strong id="currentDate">2026-03-29</strong></span>
+        <div class="history-select">
+          <label for="historyPicker">历史榜单：</label>
+          <select id="historyPicker" onchange="loadHistory(this.value)">
+            <option value="" selected>2026-03-29（当前）</option>
+          </select>
+        </div>
+      </div>
       <div class="summary">
         <div class="item"><span>最终上榜商品</span><strong>27</strong></div>
         <div class="item"><span>配饰商品</span><strong>7</strong></div>
@@ -1816,6 +1867,78 @@
   </div>
 
   <script>
+    // 历史记录加载
+    const CURRENT_DATE = '2026-03-29';
+    const historyPicker = document.getElementById('historyPicker');
+
+    async function loadHistoryIndex() {
+      try {
+        const res = await fetch('history/index.json?t=' + Date.now());
+        if (!res.ok) return;
+        const dates = await res.json();
+        dates.forEach(d => {
+          if (d === CURRENT_DATE) return;
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          historyPicker.appendChild(opt);
+        });
+      } catch (e) { console.warn('加载历史索引失败', e); }
+    }
+
+    function escHtml(str) {
+      return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function renderHistoryCard(item, rank) {
+      const link = escHtml(item.mediaUrl || '');
+      const isVideo = item.mediaType === 'video';
+      const mediaHtml = isVideo
+        ? '<a class="media-box video-box" href="' + link + '" target="_blank" rel="noopener noreferrer" title="点击打开素材"><video class="media-video" src="' + link + '" muted playsinline preload="metadata"></video><span class="play-badge">▶</span><span class="media-tag video">视频</span></a>'
+        : '<a class="media-box" href="' + link + '" target="_blank" rel="noopener noreferrer" title="点击打开素材"><img class="media-img" src="' + link + '" alt="' + escHtml(item.name) + '" loading="lazy" referrerpolicy="no-referrer" /><span class="media-tag image">图片</span></a>';
+      const rankClass = rank <= 3 ? 'rank-' + rank : 'rank-normal';
+      return '<article class="card" data-category="' + escHtml(item.category) + '"><div class="rank ' + rankClass + '">' + rank + '</div>' + mediaHtml + '<div class="content"><div class="category-row"><span class="pill">' + escHtml(item.category) + '</span></div><h3 class="name">' + escHtml(item.name) + '</h3><div class="metrics"><div class="metric"><span>下单单价(元)</span><strong>' + escHtml(item.price) + '</strong></div><div class="metric"><span>24小时发起退款率</span><strong>' + escHtml(item.refund) + '%</strong></div></div><div class="actions"><a class="action primary" href="' + escHtml(item.mediaUrl) + '" target="_blank" rel="noopener noreferrer">打开素材</a></div></div></article>';
+    }
+
+    async function loadHistory(date) {
+      if (!date) { location.reload(); return; }
+      try {
+        const res = await fetch('history/' + date + '.json?t=' + Date.now());
+        if (!res.ok) { alert('无法加载 ' + date + ' 的历史数据'); return; }
+        const data = await res.json();
+        document.getElementById('currentDate').textContent = data.updateDate || date;
+        const cats = ['配饰', '眼镜', '皮带'];
+        cats.forEach(cat => {
+          const panel = document.querySelector('[data-panel="' + cat + '"]');
+          if (!panel) return;
+          const grid = panel.querySelector('.grid');
+          if (!grid) return;
+          const items = (data.groups && data.groups[cat]) || [];
+          grid.innerHTML = items.map((item, i) => renderHistoryCard(item, i + 1)).join('');
+        });
+        const allPanel = document.querySelector('[data-panel="全部"]');
+        if (allPanel) {
+          const allGrid = allPanel.querySelector('.grid');
+          if (allGrid) {
+            let allItems = [];
+            cats.forEach(cat => { allItems = allItems.concat((data.groups && data.groups[cat]) || []); });
+            allGrid.innerHTML = allItems.map((item, i) => renderHistoryCard(item, i + 1)).join('');
+          }
+        }
+        // 更新统计数字
+        const summaryItems = document.querySelectorAll('.summary .item strong');
+        if (summaryItems.length >= 4) {
+          const total = cats.reduce((s, c) => s + ((data.groups && data.groups[c]) || []).length, 0);
+          summaryItems[0].textContent = total;
+          summaryItems[1].textContent = ((data.groups && data.groups['配饰']) || []).length;
+          summaryItems[2].textContent = ((data.groups && data.groups['眼镜']) || []).length;
+          summaryItems[3].textContent = ((data.groups && data.groups['皮带']) || []).length;
+        }
+      } catch (e) { alert('加载历史数据失败: ' + e.message); }
+    }
+
+    loadHistoryIndex();
+
     const tabs = Array.from(document.querySelectorAll('.tab'));
     const panels = Array.from(document.querySelectorAll('.panel'));
     tabs.forEach(tab => {
