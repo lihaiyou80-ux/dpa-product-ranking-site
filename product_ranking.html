@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>珠宝配饰行业跑品榜单</title>
+  <title>DPA商品榜单（严格素材版）</title>
   <style>
     :root {
       --bg: #0b1020;
@@ -54,48 +54,6 @@
       color: var(--muted);
       line-height: 1.7;
       font-size: 15px;
-    }
-    .date-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 14px;
-      padding: 12px 16px;
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-    }
-    .update-date {
-      font-size: 14px;
-      color: var(--text);
-    }
-    .update-date strong {
-      color: var(--gold);
-      font-size: 15px;
-    }
-    .history-select {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .history-select label {
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .history-select select {
-      background: rgba(15, 23, 42, 0.9);
-      color: var(--text);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 6px 12px;
-      font-size: 13px;
-      cursor: pointer;
-    }
-    .history-select select:focus {
-      outline: none;
-      border-color: var(--accent);
     }
     .summary {
       display: grid;
@@ -281,7 +239,7 @@
     }
     .metrics {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
       margin-bottom: 16px;
     }
@@ -351,22 +309,13 @@
 <body>
   <div class="wrap">
     <section class="hero">
-      <h1>珠宝配饰行业跑品榜单</h1>
-      <p>每周一、三、五更新榜单</p>
-      <div class="date-bar">
-        <span class="update-date">📅 数据更新日期：<strong id="currentDate">2026-04-08</strong></span>
-        <div class="history-select">
-          <label for="historyPicker">历史榜单：</label>
-          <select id="historyPicker" onchange="loadHistory(this.value)">
-            <option value="" selected>2026-04-08（当前）</option>
-          </select>
-        </div>
-      </div>
+      <h1>DPA 商品榜单（严格素材版）</h1>
+      <p>仅保留满足以下条件的商品：<strong>素材MD5示意(预览)不为“空”</strong>、<strong>商品图可直接从素材预览链接展示</strong>、<strong>每个商品都有可点击打开的素材链接</strong>。当前榜单基于 AData 页面排序结果去重后生成，并按「配饰 / 眼镜」分类展示。</p>
       <div class="summary">
-        <div class="item"><span>最终上榜商品</span><strong>30</strong></div>
+        <div class="item"><span>最终上榜商品</span><strong>20</strong></div>
         <div class="item"><span>配饰商品</span><strong>10</strong></div>
         <div class="item"><span>眼镜商品</span><strong>10</strong></div>
-        <div class="item"><span>皮带商品</span><strong>10</strong></div>
+        <div class="item"><span>筛选规则</span><strong>严格非空素材</strong></div>
       </div>
     </section>
 
@@ -374,7 +323,6 @@
       <button class="tab active" data-filter="全部">全部</button>
       <button class="tab" data-filter="配饰">配饰</button>
       <button class="tab" data-filter="眼镜">眼镜</button>
-      <button class="tab" data-filter="皮带">皮带</button>
     </div>
 
     <section class="panel" data-panel="配饰">
@@ -386,25 +334,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-1">1</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53g4ceeaaeyiaodcwhc5ur4nyeii3qiqsa.f0.mp4?dis_k=41fa29a0f87a9b6e34dfd5d7529f1e4b&amp;dis_t=1775039348&amp;m=5fdc785175245ce6406dfdc71db7e677&amp;sha256=72fd15aa03acd0b14e58c7c198950fb68d030fc0d2efd54479a22e54e8775721" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="时尚饰品 &gt; 手饰 &gt; 戒指" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53g4ceeaaeyiaodcwhc5ur4nyeii3qiqsa.f0.mp4?dis_k=41fa29a0f87a9b6e34dfd5d7529f1e4b&amp;dis_t=1775039348&amp;m=5fdc785175245ce6406dfdc71db7e677&amp;sha256=72fd15aa03acd0b14e58c7c198950fb68d030fc0d2efd54479a22e54e8775721" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53uibi6aacliacsegg3jurriqer6rafd2a.f0.mp4?dis_k=2899dc1b50a0ee5c5ad2f8698e755945&amp;dis_t=1774594059&amp;m=568564e81d877e0d0e41c4144b3b6be3&amp;sha256=66cb07d55025ee83d80651fd2e876c15c47ca086f0f1e0eba90590cde82a0503" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="铜合金设计感耳钉玫瑰金色珠珠耳钉女小巧精致清新风耳钉时尚百搭耳饰" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53uibi6aacliacsegg3jurriqer6rafd2a.f0.mp4?dis_k=2899dc1b50a0ee5c5ad2f8698e755945&amp;dis_t=1774594059&amp;m=568564e81d877e0d0e41c4144b3b6be3&amp;sha256=66cb07d55025ee83d80651fd2e876c15c47ca086f0f1e0eba90590cde82a0503" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #2</span>
+          <span class="origin-rank">原始排序 #4</span>
         </div>
-        <h3 class="name">时尚饰品 &gt; 手饰 &gt; 戒指</h3>
-        <div class="spu">177896332<br/>女戒指/指环</div>
+        <h3 class="name">铜合金设计感耳钉玫瑰金色珠珠耳钉女小巧精致清新风耳钉时尚百搭耳饰</h3>
+        <div class="spu">4034850687828636133<br/>女铜合金耳钉</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>0.93</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-29.40%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.20</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>29.86</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>6.01%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53g4ceeaaeyiaodcwhc5ur4nyeii3qiqsa.f0.mp4?dis_k=41fa29a0f87a9b6e34dfd5d7529f1e4b&amp;dis_t=1775039348&amp;m=5fdc785175245ce6406dfdc71db7e677&amp;sha256=72fd15aa03acd0b14e58c7c198950fb68d030fc0d2efd54479a22e54e8775721" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53uibi6aacliacsegg3jurriqer6rafd2a.f0.mp4?dis_k=2899dc1b50a0ee5c5ad2f8698e755945&amp;dis_t=1774594059&amp;m=568564e81d877e0d0e41c4144b3b6be3&amp;sha256=66cb07d55025ee83d80651fd2e876c15c47ca086f0f1e0eba90590cde82a0503" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -413,25 +362,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-2">2</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc374acyaaa5iam4lwnqvurv7yeft7qalca.f0.mp4?dis_k=fdafae7e966537503b606ba0c6268e54&amp;dis_t=1775100506&amp;m=dbe4f59061105d6b1569f4a546c55f32&amp;sha256=0d588e2cf8acc09c83cf4ba87d4f31e9cd00bda84b69ccc3b599f4f5774b9c41" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="【麦玲玲设计】2026年聚-进三合生肖编织貔貅男女同款金发晶挂件生肖用品" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc374acyaaa5iam4lwnqvurv7yeft7qalca.f0.mp4?dis_k=fdafae7e966537503b606ba0c6268e54&amp;dis_t=1775100506&amp;m=dbe4f59061105d6b1569f4a546c55f32&amp;sha256=0d588e2cf8acc09c83cf4ba87d4f31e9cd00bda84b69ccc3b599f4f5774b9c41" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53oabzaaadjiaavnoavfurs4aesbyaheca.f0.mp4?dis_k=a73f71843805a9140b9247416344daba&amp;dis_t=1774426713&amp;m=1e7c6bf49dea874d8218f522f6cae354&amp;sha256=091fd19b3fa117358e584aead25915901475eadbf907e08ec57697e182627231" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="铜合金简约气质福袋项链女时尚款小众轻奢饰品" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53oabzaaadjiaavnoavfurs4aesbyaheca.f0.mp4?dis_k=a73f71843805a9140b9247416344daba&amp;dis_t=1774426713&amp;m=1e7c6bf49dea874d8218f522f6cae354&amp;sha256=091fd19b3fa117358e584aead25915901475eadbf907e08ec57697e182627231" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #12</span>
+          <span class="origin-rank">原始排序 #6</span>
         </div>
-        <h3 class="name">【麦玲玲设计】2026年聚-进三合生肖编织貔貅男女同款金发晶挂件生肖用品</h3>
-        <div class="spu">368807750<br/>麦玲玲Maklinghit</div>
+        <h3 class="name">铜合金简约气质福袋项链女时尚款小众轻奢饰品</h3>
+        <div class="spu">9023593003004817026<br/>女铜合金项链</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.73</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-10.26%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.01</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>40.01</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>22.66%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc374acyaaa5iam4lwnqvurv7yeft7qalca.f0.mp4?dis_k=fdafae7e966537503b606ba0c6268e54&amp;dis_t=1775100506&amp;m=dbe4f59061105d6b1569f4a546c55f32&amp;sha256=0d588e2cf8acc09c83cf4ba87d4f31e9cd00bda84b69ccc3b599f4f5774b9c41" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53oabzaaadjiaavnoavfurs4aesbyaheca.f0.mp4?dis_k=a73f71843805a9140b9247416344daba&amp;dis_t=1774426713&amp;m=1e7c6bf49dea874d8218f522f6cae354&amp;sha256=091fd19b3fa117358e584aead25915901475eadbf907e08ec57697e182627231" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -440,25 +390,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-3">3</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53xqbloaac3yaisr6etburrpaew66afn2a.f0.mp4?dis_k=bfcf811fd8b65e2e53e493c2d50158d8&amp;dis_t=1774599809&amp;m=be4556b3c1b0fc3aab73f1b0a3c67fae&amp;sha256=1598085e58cf9d53e476e76ef752e56b9835ccbc785a97a1e8757caa74f07c5d" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="铜合金新中式银色福袋项链女2026新款网红爆款高级感锁骨链轻奢气质吊坠" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53xqbloaac3yaisr6etburrpaew66afn2a.f0.mp4?dis_k=bfcf811fd8b65e2e53e493c2d50158d8&amp;dis_t=1774599809&amp;m=be4556b3c1b0fc3aab73f1b0a3c67fae&amp;sha256=1598085e58cf9d53e476e76ef752e56b9835ccbc785a97a1e8757caa74f07c5d" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53riaeaaaaciamy4jxfnurvcqeicfaaqca.f0.mp4?dis_k=0ac0d4fd0a232d70b007c4a8fd897a14&amp;dis_t=1774233525&amp;m=7d27a0438b36dd6c5d996f6659876e0d&amp;sha256=b99b52c9114a6df0599b92ebd7b30556b19e330bafea4ab73ccc793c54e0975f" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="【头层牛皮】保罗男士皮带真皮自动扣 2024新款奢侈真皮商务百搭" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53riaeaaaaciamy4jxfnurvcqeicfaaqca.f0.mp4?dis_k=0ac0d4fd0a232d70b007c4a8fd897a14&amp;dis_t=1774233525&amp;m=7d27a0438b36dd6c5d996f6659876e0d&amp;sha256=b99b52c9114a6df0599b92ebd7b30556b19e330bafea4ab73ccc793c54e0975f" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #24</span>
+          <span class="origin-rank">原始排序 #10</span>
         </div>
-        <h3 class="name">铜合金新中式银色福袋项链女2026新款网红爆款高级感锁骨链轻奢气质吊坠</h3>
-        <div class="spu">181529964<br/>女铜合金项链</div>
+        <h3 class="name">【头层牛皮】保罗男士皮带真皮自动扣 2024新款奢侈真皮商务百搭</h3>
+        <div class="spu">2360113904326203422<br/>保罗/POLO SPORT腰带/皮带/腰链</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.20</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+13.28%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.33</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>188.25</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>0%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53xqbloaac3yaisr6etburrpaew66afn2a.f0.mp4?dis_k=bfcf811fd8b65e2e53e493c2d50158d8&amp;dis_t=1774599809&amp;m=be4556b3c1b0fc3aab73f1b0a3c67fae&amp;sha256=1598085e58cf9d53e476e76ef752e56b9835ccbc785a97a1e8757caa74f07c5d" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53riaeaaaaciamy4jxfnurvcqeicfaaqca.f0.mp4?dis_k=0ac0d4fd0a232d70b007c4a8fd897a14&amp;dis_t=1774233525&amp;m=7d27a0438b36dd6c5d996f6659876e0d&amp;sha256=b99b52c9114a6df0599b92ebd7b30556b19e330bafea4ab73ccc793c54e0975f" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -467,25 +418,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">4</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc34eaq4aablaam62gnjzurxyieb3qqcdsa.f0.mp4?dis_k=bf0edcb8af20d531b8cc047395c09e8f&amp;dis_t=1775026707&amp;m=c05a39d611489c0b44e7f716bc18d991&amp;sha256=9b8336d6d05865af862f16b7dcc49aafb578dbc967371b9fae6ad27cf4db4e9b" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="四叶草猫眼项链" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc34eaq4aablaam62gnjzurxyieb3qqcdsa.f0.mp4?dis_k=bf0edcb8af20d531b8cc047395c09e8f&amp;dis_t=1775026707&amp;m=c05a39d611489c0b44e7f716bc18d991&amp;sha256=9b8336d6d05865af862f16b7dcc49aafb578dbc967371b9fae6ad27cf4db4e9b" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3q4aoaaaacuaepx2nlftbvbye4cdqbyca.f0.mp4?dis_k=29ee679808031527e6d40df3c419533d&amp;dis_t=1774493136&amp;m=4a007baaa179e1d461e142eeaeb20fd3&amp;sha256=e9033862e80da2a587ee5ed202f95073b4e17b64d907d501c34305b1ed010d28" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="CIARTUAR/卡西亚 经典款男士针扣皮带 时尚百搭 不挑身材 高档礼盒包装" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3q4aoaaaacuaepx2nlftbvbye4cdqbyca.f0.mp4?dis_k=29ee679808031527e6d40df3c419533d&amp;dis_t=1774493136&amp;m=4a007baaa179e1d461e142eeaeb20fd3&amp;sha256=e9033862e80da2a587ee5ed202f95073b4e17b64d907d501c34305b1ed010d28" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #33</span>
+          <span class="origin-rank">原始排序 #13</span>
         </div>
-        <h3 class="name">四叶草猫眼项链</h3>
-        <div class="spu">255493370<br/>时尚饰品</div>
+        <h3 class="name">CIARTUAR/卡西亚 经典款男士针扣皮带 时尚百搭 不挑身材 高档礼盒包装</h3>
+        <div class="spu">8183465193587584658<br/>男腰带</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.56</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-4.98%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.77</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>300.43</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>11.11%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc34eaq4aablaam62gnjzurxyieb3qqcdsa.f0.mp4?dis_k=bf0edcb8af20d531b8cc047395c09e8f&amp;dis_t=1775026707&amp;m=c05a39d611489c0b44e7f716bc18d991&amp;sha256=9b8336d6d05865af862f16b7dcc49aafb578dbc967371b9fae6ad27cf4db4e9b" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3q4aoaaaacuaepx2nlftbvbye4cdqbyca.f0.mp4?dis_k=29ee679808031527e6d40df3c419533d&amp;dis_t=1774493136&amp;m=4a007baaa179e1d461e142eeaeb20fd3&amp;sha256=e9033862e80da2a587ee5ed202f95073b4e17b64d907d501c34305b1ed010d28" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -494,25 +446,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">5</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3veckoaaeqiajky6o4rur5kieu6uqjj2a.f0.mp4?dis_k=c9d369585a8e158acd77291f4136f0ce&amp;dis_t=1774858843&amp;m=424a3a6664e8db1f14844d8e92b9709e&amp;sha256=25900cc82a2093e752317c62af35069840ce90f7d6ffea36d1abc13e688ee6e4" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="铜合金银色福袋项链吊坠项链嘴唇锁骨链" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3veckoaaeqiajky6o4rur5kieu6uqjj2a.f0.mp4?dis_k=c9d369585a8e158acd77291f4136f0ce&amp;dis_t=1774858843&amp;m=424a3a6664e8db1f14844d8e92b9709e&amp;sha256=25900cc82a2093e752317c62af35069840ce90f7d6ffea36d1abc13e688ee6e4" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53uqbxaaaduaapotnzxrurtjaeocsag4ca.f0.mp4?dis_k=531c0f5f2f61c996aadb85306ad6ed82&amp;dis_t=1773832871&amp;m=faecda6381359cac59da2c345683098d&amp;sha256=aecf3ba56b7502735b372afb7c4485a897a8e7b123b37d937dbb7ca8acf3b984" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="铜合金【九尾】灵狐戒指国风民族风开口指环气质百搭设计感#925不掉色" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53uqbxaaaduaapotnzxrurtjaeocsag4ca.f0.mp4?dis_k=531c0f5f2f61c996aadb85306ad6ed82&amp;dis_t=1773832871&amp;m=faecda6381359cac59da2c345683098d&amp;sha256=aecf3ba56b7502735b372afb7c4485a897a8e7b123b37d937dbb7ca8acf3b984" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #46</span>
+          <span class="origin-rank">原始排序 #22</span>
         </div>
-        <h3 class="name">铜合金银色福袋项链吊坠项链嘴唇锁骨链</h3>
-        <div class="spu">180937199<br/>男女通用铜合金项链</div>
+        <h3 class="name">铜合金【九尾】灵狐戒指国风民族风开口指环气质百搭设计感#925不掉色</h3>
+        <div class="spu">5736705058979547406<br/>男铜合金戒指/指环</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.89</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+7.26%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.51</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>29.97</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>11.76%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3veckoaaeqiajky6o4rur5kieu6uqjj2a.f0.mp4?dis_k=c9d369585a8e158acd77291f4136f0ce&amp;dis_t=1774858843&amp;m=424a3a6664e8db1f14844d8e92b9709e&amp;sha256=25900cc82a2093e752317c62af35069840ce90f7d6ffea36d1abc13e688ee6e4" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53uqbxaaaduaapotnzxrurtjaeocsag4ca.f0.mp4?dis_k=531c0f5f2f61c996aadb85306ad6ed82&amp;dis_t=1773832871&amp;m=faecda6381359cac59da2c345683098d&amp;sha256=aecf3ba56b7502735b372afb7c4485a897a8e7b123b37d937dbb7ca8acf3b984" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -521,24 +474,27 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">6</div>
       
-      <a class="media-box" href="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/6915ae6c000cdf3e29644b404464bc1e0000008d00004eec?ck=c1c6288ccd70808c5d93ffca818565b9&amp;m=c1c6288ccd70808c5d93ffca818565b9&amp;sha256=9d3c0fd3f34d4eb7f0ffed989fac4ce50ad4ae1fbf103c79d7e2301c94349ee3" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-        <img class="media-img" src="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/6915ae6c000cdf3e29644b404464bc1e0000008d00004eec?ck=c1c6288ccd70808c5d93ffca818565b9&amp;m=c1c6288ccd70808c5d93ffca818565b9&amp;sha256=9d3c0fd3f34d4eb7f0ffed989fac4ce50ad4ae1fbf103c79d7e2301c94349ee3" alt="[中国黄金China Gold]上等和田玉精致龙凤呈祥月牙龙凤情侣男女士挂件定情吊坠玉佩结婚纪念日礼物" loading="lazy" referrerpolicy="no-referrer" />
-        <span class="media-tag image">图片素材</span>
-      </a>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53mmawqaabraaecgwdwjurwyyenbrqc2ca.f0.mp4?dis_k=529aa2de8c0df50dba1c93237678b3e6&amp;dis_t=1774334126&amp;m=26960ed09371f07b6da714b5b4e82b27&amp;sha256=6d5a7eca404141af7a08cf6e22f7ed43a49f0c25d899fe89d2d646816f07136d" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="蝶羽姿高端男士皮带内穿无牙自动扣腰带男款中青年商务休闲百搭裤带潮流" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53mmawqaabraaecgwdwjurwyyenbrqc2ca.f0.mp4?dis_k=529aa2de8c0df50dba1c93237678b3e6&amp;dis_t=1774334126&amp;m=26960ed09371f07b6da714b5b4e82b27&amp;sha256=6d5a7eca404141af7a08cf6e22f7ed43a49f0c25d899fe89d2d646816f07136d" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+      <span class="play-badge">▶</span>
+      <span class="media-tag video">视频商品图</span>
+    </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #68</span>
+          <span class="origin-rank">原始排序 #25</span>
         </div>
-        <h3 class="name">[中国黄金China Gold]上等和田玉精致龙凤呈祥月牙龙凤情侣男女士挂件定情吊坠玉佩结婚纪念日礼物</h3>
-        <div class="spu">196701522<br/>中国黄金/CHINA GOLD和田玉单吊坠</div>
+        <h3 class="name">蝶羽姿高端男士皮带内穿无牙自动扣腰带男款中青年商务休闲百搭裤带潮流</h3>
+        <div class="spu">5855521872363209126<br/>PU男腰带</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>7.35</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+642.66%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.18</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>19.58</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>5.88%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/6915ae6c000cdf3e29644b404464bc1e0000008d00004eec?ck=c1c6288ccd70808c5d93ffca818565b9&amp;m=c1c6288ccd70808c5d93ffca818565b9&amp;sha256=9d3c0fd3f34d4eb7f0ffed989fac4ce50ad4ae1fbf103c79d7e2301c94349ee3" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">图片直链</span>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53mmawqaabraaecgwdwjurwyyenbrqc2ca.f0.mp4?dis_k=529aa2de8c0df50dba1c93237678b3e6&amp;dis_t=1774334126&amp;m=26960ed09371f07b6da714b5b4e82b27&amp;sha256=6d5a7eca404141af7a08cf6e22f7ed43a49f0c25d899fe89d2d646816f07136d" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <span class="action ghost">视频直链</span>
         </div>
       </div>
     </article>
@@ -546,24 +502,27 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">7</div>
       
-      <a class="media-box" href="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/695299fd0006568e0b84d98f5e0cb6150000008d00004eec?ck=6e0e453a06955c9af12d31c9620db640&amp;m=6e0e453a06955c9af12d31c9620db640&amp;sha256=71ea94cd49c7ac1f3b1d4b322876b0fb29dfc7b5ae98dae5065509cb233e3155" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-        <img class="media-img" src="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/695299fd0006568e0b84d98f5e0cb6150000008d00004eec?ck=6e0e453a06955c9af12d31c9620db640&amp;m=6e0e453a06955c9af12d31c9620db640&amp;sha256=71ea94cd49c7ac1f3b1d4b322876b0fb29dfc7b5ae98dae5065509cb233e3155" alt="珍珠白珠圆珠项链 多样性发其一 L0820 甜帅臻选珍珠" loading="lazy" referrerpolicy="no-referrer" />
-        <span class="media-tag image">图片素材</span>
-      </a>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3eebluaacu4abxg5eu5urqiiexiqqfosa.f0.mp4?dis_k=96474793f95fc1b9d495780754deeb04&amp;dis_t=1773824190&amp;m=75b3afe8f4f0512fb9b346f684f9f28f&amp;sha256=b716e353a483d559d805e33042cd9f7026b0f6c522a499f2145bcf2c60ccc4e7" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="《上岸锦鲤》普陀直发 2026年文创锦鲤手绳传统手工文创编织男女款学生考试创意编绳工作仕途文创晋升锦鲤绳" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3eebluaacu4abxg5eu5urqiiexiqqfosa.f0.mp4?dis_k=96474793f95fc1b9d495780754deeb04&amp;dis_t=1773824190&amp;m=75b3afe8f4f0512fb9b346f684f9f28f&amp;sha256=b716e353a483d559d805e33042cd9f7026b0f6c522a499f2145bcf2c60ccc4e7" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+      <span class="play-badge">▶</span>
+      <span class="media-tag video">视频商品图</span>
+    </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #99</span>
+          <span class="origin-rank">原始排序 #30</span>
         </div>
-        <h3 class="name">珍珠白珠圆珠项链 多样性发其一 L0820 甜帅臻选珍珠</h3>
-        <div class="spu">59656133<br/>甜帅藏星阁</div>
+        <h3 class="name">《上岸锦鲤》普陀直发 2026年文创锦鲤手绳传统手工文创编织男女款学生考试创意编绳工作仕途文创晋升锦鲤绳</h3>
+        <div class="spu">4128351877699732434<br/>男女通用手绳</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>5.00</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.65</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>79.54</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>7.69%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/695299fd0006568e0b84d98f5e0cb6150000008d00004eec?ck=6e0e453a06955c9af12d31c9620db640&amp;m=6e0e453a06955c9af12d31c9620db640&amp;sha256=71ea94cd49c7ac1f3b1d4b322876b0fb29dfc7b5ae98dae5065509cb233e3155" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">图片直链</span>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3eebluaacu4abxg5eu5urqiiexiqqfosa.f0.mp4?dis_k=96474793f95fc1b9d495780754deeb04&amp;dis_t=1773824190&amp;m=75b3afe8f4f0512fb9b346f684f9f28f&amp;sha256=b716e353a483d559d805e33042cd9f7026b0f6c522a499f2145bcf2c60ccc4e7" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <span class="action ghost">视频直链</span>
         </div>
       </div>
     </article>
@@ -571,25 +530,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">8</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53nuac6aaaqqah55wkvfuru3ief5wqal2a.f0.mp4?dis_k=913faaa7625f52689311502489ce8a13&amp;dis_t=1775211300&amp;m=a6c911e5e848ca3e4a29b9c263889496&amp;sha256=5b92223483e846187f05b5ad6168f6784c889ada47bf16ddaec18446fdb87f6e" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="红色转运珠项链" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53nuac6aaaqqah55wkvfuru3ief5wqal2a.f0.mp4?dis_k=913faaa7625f52689311502489ce8a13&amp;dis_t=1775211300&amp;m=a6c911e5e848ca3e4a29b9c263889496&amp;sha256=5b92223483e846187f05b5ad6168f6784c889ada47bf16ddaec18446fdb87f6e" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53aubt6aadzeamyjgcu5ursbieh4cqgp2a.f0.mp4?dis_k=e5b45c43b4431ae43d52b2feff2e93b6&amp;dis_t=1774320119&amp;m=29271029c5252c4618d365ae08d32003&amp;sha256=6adfb74f627dc328d4eceadc77999d3408e3c456bf8c4c9611cad2e50273822e" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="蝶羽姿新款H扣男士腰带自动皮带百搭商务休闲裤腰带裤带" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53aubt6aadzeamyjgcu5ursbieh4cqgp2a.f0.mp4?dis_k=e5b45c43b4431ae43d52b2feff2e93b6&amp;dis_t=1774320119&amp;m=29271029c5252c4618d365ae08d32003&amp;sha256=6adfb74f627dc328d4eceadc77999d3408e3c456bf8c4c9611cad2e50273822e" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #110</span>
+          <span class="origin-rank">原始排序 #34</span>
         </div>
-        <h3 class="name">红色转运珠项链</h3>
-        <div class="spu">181529964<br/>女铜合金项链</div>
+        <h3 class="name">蝶羽姿新款H扣男士腰带自动皮带百搭商务休闲裤腰带裤带</h3>
+        <div class="spu">5855521872363209126<br/>PU男腰带</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.18</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+1.64%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.77</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>19.90</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>3.66%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53nuac6aaaqqah55wkvfuru3ief5wqal2a.f0.mp4?dis_k=913faaa7625f52689311502489ce8a13&amp;dis_t=1775211300&amp;m=a6c911e5e848ca3e4a29b9c263889496&amp;sha256=5b92223483e846187f05b5ad6168f6784c889ada47bf16ddaec18446fdb87f6e" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53aubt6aadzeamyjgcu5ursbieh4cqgp2a.f0.mp4?dis_k=e5b45c43b4431ae43d52b2feff2e93b6&amp;dis_t=1774320119&amp;m=29271029c5252c4618d365ae08d32003&amp;sha256=6adfb74f627dc328d4eceadc77999d3408e3c456bf8c4c9611cad2e50273822e" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -598,25 +558,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">9</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53uiafkaaariahe7iaururviqekwraavka.f0.mp4?dis_k=5d791b8fb692efbe3dafbbe7ee32c0aa&amp;dis_t=1761617908&amp;m=ca8d37d7aa876386081f60b6337dccb9&amp;sha256=c2075f61afaa9f74ad96a743bf5b240a3f9f2a2bcb9edbcfcd96898b67737b83" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="白岚银瓦珍珠耳钉925银耳环耳饰耳坠女新款气质原创饰品ED4576" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53uiafkaaariahe7iaururviqekwraavka.f0.mp4?dis_k=5d791b8fb692efbe3dafbbe7ee32c0aa&amp;dis_t=1761617908&amp;m=ca8d37d7aa876386081f60b6337dccb9&amp;sha256=c2075f61afaa9f74ad96a743bf5b240a3f9f2a2bcb9edbcfcd96898b67737b83" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3ueb3waadxyaltav67zurtiiexoqqho2a.f0.mp4?dis_k=9deba4e9b5698cf970853c93c11b954b&amp;dis_t=1773995496&amp;m=de5e80d3ef9ec235f10a90d60b3d5650&amp;sha256=5c2d3f953d11e5453cf9d81462db62c32b4b6fc188fd2c37e2c0a01bca19b1ec" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="铜合金【貔貅染红运】国风开口戒指复古做旧民族风指环新中式戒指" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3ueb3waadxyaltav67zurtiiexoqqho2a.f0.mp4?dis_k=9deba4e9b5698cf970853c93c11b954b&amp;dis_t=1773995496&amp;m=de5e80d3ef9ec235f10a90d60b3d5650&amp;sha256=5c2d3f953d11e5453cf9d81462db62c32b4b6fc188fd2c37e2c0a01bca19b1ec" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #155</span>
+          <span class="origin-rank">原始排序 #35</span>
         </div>
-        <h3 class="name">白岚银瓦珍珠耳钉925银耳环耳饰耳坠女新款气质原创饰品ED4576</h3>
-        <div class="spu">204359491<br/>白岚/BAILAN淡水珍珠珍珠耳钉</div>
+        <h3 class="name">铜合金【貔貅染红运】国风开口戒指复古做旧民族风指环新中式戒指</h3>
+        <div class="spu">4479589774137687191<br/>女铜合金戒指/指环</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>4.45</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+158.33%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.94</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>29.99</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>15.79%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53uiafkaaariahe7iaururviqekwraavka.f0.mp4?dis_k=5d791b8fb692efbe3dafbbe7ee32c0aa&amp;dis_t=1761617908&amp;m=ca8d37d7aa876386081f60b6337dccb9&amp;sha256=c2075f61afaa9f74ad96a743bf5b240a3f9f2a2bcb9edbcfcd96898b67737b83" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3ueb3waadxyaltav67zurtiiexoqqho2a.f0.mp4?dis_k=9deba4e9b5698cf970853c93c11b954b&amp;dis_t=1773995496&amp;m=de5e80d3ef9ec235f10a90d60b3d5650&amp;sha256=5c2d3f953d11e5453cf9d81462db62c32b4b6fc188fd2c37e2c0a01bca19b1ec" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -625,25 +586,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">10</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3auci2aae4uajjkoknfur4bierucqjdka.f0.mp4?dis_k=061058b8caa5e952ffbfe18001c425e0&amp;dis_t=1775114731&amp;m=03a61125157ad68c05175b2c1035ffd9&amp;sha256=72bfc56b9c8fc24c6a0098a3876c847bc3cd5b03be1a53ac2acfa08d425193f7" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="《上岸锦鲤》普陀山文创上岸锦鲤手绳 传统手工编织文创手绳" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3auci2aae4uajjkoknfur4bierucqjdka.f0.mp4?dis_k=061058b8caa5e952ffbfe18001c425e0&amp;dis_t=1775114731&amp;m=03a61125157ad68c05175b2c1035ffd9&amp;sha256=72bfc56b9c8fc24c6a0098a3876c847bc3cd5b03be1a53ac2acfa08d425193f7" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b5374awiaabp4acupy2t5ubx7yemt7qczca.f0.mp4?dis_k=31afa0d59d2f08d4e909cefd7cac340d&amp;dis_t=1759027864&amp;m=7fe27428b6e9501cca9968a06d88acd7&amp;sha256=a0dd32e6073cf7d7d73cdcc02d007b6b80c4dc0d8e7adf451730737f37838611" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="FANZEMARCK 时尚男士牛皮腰带 平滑扣皮带 舒适百搭 高档礼盒装" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b5374awiaabp4acupy2t5ubx7yemt7qczca.f0.mp4?dis_k=31afa0d59d2f08d4e909cefd7cac340d&amp;dis_t=1759027864&amp;m=7fe27428b6e9501cca9968a06d88acd7&amp;sha256=a0dd32e6073cf7d7d73cdcc02d007b6b80c4dc0d8e7adf451730737f37838611" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #156</span>
+          <span class="origin-rank">原始排序 #38</span>
         </div>
-        <h3 class="name">《上岸锦鲤》普陀山文创上岸锦鲤手绳 传统手工编织文创手绳</h3>
-        <div class="spu">193230021<br/>男女通用手绳</div>
+        <h3 class="name">FANZEMARCK 时尚男士牛皮腰带 平滑扣皮带 舒适百搭 高档礼盒装</h3>
+        <div class="spu">6082872905395771068<br/>真皮男腰带</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>0.98</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+24.76%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.66</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>299.99</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>0%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3auci2aae4uajjkoknfur4bierucqjdka.f0.mp4?dis_k=061058b8caa5e952ffbfe18001c425e0&amp;dis_t=1775114731&amp;m=03a61125157ad68c05175b2c1035ffd9&amp;sha256=72bfc56b9c8fc24c6a0098a3876c847bc3cd5b03be1a53ac2acfa08d425193f7" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b5374awiaabp4acupy2t5ubx7yemt7qczca.f0.mp4?dis_k=31afa0d59d2f08d4e909cefd7cac340d&amp;dis_t=1759027864&amp;m=7fe27428b6e9501cca9968a06d88acd7&amp;sha256=a0dd32e6073cf7d7d73cdcc02d007b6b80c4dc0d8e7adf451730737f37838611" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -660,25 +622,26 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-1">1</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53oya32aab5iacyvnia5urw5qexv3adpka.f0.mp4?dis_k=40f93cbbd882ba56d92969e4ac82bf62&amp;dis_t=1772720544&amp;m=50dd7ac3af19bb1fce59387ba6f31409&amp;sha256=f166428715eb2d9500a6e0c7112456bdf6fd867b6ae12b7f55d8116bb96a4050" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="BAPORSSA/巴宝莎时尚素颜镜美妆太阳镜防紫外线墨镜气质眼镜大框太阳镜高级不挑脸型" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53oya32aab5iacyvnia5urw5qexv3adpka.f0.mp4?dis_k=40f93cbbd882ba56d92969e4ac82bf62&amp;dis_t=1772720544&amp;m=50dd7ac3af19bb1fce59387ba6f31409&amp;sha256=f166428715eb2d9500a6e0c7112456bdf6fd867b6ae12b7f55d8116bb96a4050" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3pubzqaadmiaf76fyhfurs7ietb6qhgca.f0.mp4?dis_k=6cb03af3acac80858ac2183ff87339ad&amp;dis_t=1773913901&amp;m=3234d27811ac4c8086b63634d507c03f&amp;sha256=535358de5c0b3324ce50ade346631fc0b961cb73e5dd1d51d167292cba98b147" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="中单于荣光同款板材方框高级感墨镜男士开车专用高清太阳镜2205高清墨镜" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3pubzqaadmiaf76fyhfurs7ietb6qhgca.f0.mp4?dis_k=6cb03af3acac80858ac2183ff87339ad&amp;dis_t=1773913901&amp;m=3234d27811ac4c8086b63634d507c03f&amp;sha256=535358de5c0b3324ce50ade346631fc0b961cb73e5dd1d51d167292cba98b147" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #4</span>
+          <span class="origin-rank">原始排序 #7</span>
         </div>
-        <h3 class="name">BAPORSSA/巴宝莎时尚素颜镜美妆太阳镜防紫外线墨镜气质眼镜大框太阳镜高级不挑脸型</h3>
-        <div class="spu">28841286<br/>Baporssa轻奢墨镜</div>
+        <h3 class="name">中单于荣光同款板材方框高级感墨镜男士开车专用高清太阳镜2205高清墨镜</h3>
+        <div class="spu">986319276985321325<br/>中单方形男太阳镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.81</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.32</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>197.72</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>1.75%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53oya32aab5iacyvnia5urw5qexv3adpka.f0.mp4?dis_k=40f93cbbd882ba56d92969e4ac82bf62&amp;dis_t=1772720544&amp;m=50dd7ac3af19bb1fce59387ba6f31409&amp;sha256=f166428715eb2d9500a6e0c7112456bdf6fd867b6ae12b7f55d8116bb96a4050" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3pubzqaadmiaf76fyhfurs7ietb6qhgca.f0.mp4?dis_k=6cb03af3acac80858ac2183ff87339ad&amp;dis_t=1773913901&amp;m=3234d27811ac4c8086b63634d507c03f&amp;sha256=535358de5c0b3324ce50ade346631fc0b961cb73e5dd1d51d167292cba98b147" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -687,25 +650,26 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-2">2</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53a4afuaaaryaftx6n3rurubyelidqawsa.f0.mp4?dis_k=8bff9401f8bc1edab75025ce46362c46&amp;dis_t=1775043485&amp;m=ca2d426d4d16b4cbc4822787bb054f7f&amp;sha256=051c7ac6f97bb3fc9da48164ca3192f66bc671ad8f49520ba47dabd56bca58b7" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="BAPORSSA/巴宝莎轻薄素颜美妆老花镜时尚防蓝光护眼老视镜无框便携轻巧佩戴无感轻奢修颜" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53a4afuaaaryaftx6n3rurubyelidqawsa.f0.mp4?dis_k=8bff9401f8bc1edab75025ce46362c46&amp;dis_t=1775043485&amp;m=ca2d426d4d16b4cbc4822787bb054f7f&amp;sha256=051c7ac6f97bb3fc9da48164ca3192f66bc671ad8f49520ba47dabd56bca58b7" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53b4aryaabaqaawun65burwdyedqhqchca.f0.mp4?dis_k=78c119369e1e861188cf536a7cf8c0f6&amp;dis_t=1774132437&amp;m=7f3200d07df4874c2bca50f5ba1dcbc1&amp;sha256=14cb74cdf6793b30739c430586811229d6176ed4633c6ccf7d8409bf98774fb1" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="【时尚百搭】防蓝光老花镜中老年高清男女超清时尚便携超轻老花镜" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53b4aryaabaqaawun65burwdyedqhqchca.f0.mp4?dis_k=78c119369e1e861188cf536a7cf8c0f6&amp;dis_t=1774132437&amp;m=7f3200d07df4874c2bca50f5ba1dcbc1&amp;sha256=14cb74cdf6793b30739c430586811229d6176ed4633c6ccf7d8409bf98774fb1" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #5</span>
+          <span class="origin-rank">原始排序 #8</span>
         </div>
-        <h3 class="name">BAPORSSA/巴宝莎轻薄素颜美妆老花镜时尚防蓝光护眼老视镜无框便携轻巧佩戴无感轻奢修颜</h3>
-        <div class="spu">519715513<br/>巴宝莎老花眼镜</div>
+        <h3 class="name">【时尚百搭】防蓝光老花镜中老年高清男女超清时尚便携超轻老花镜</h3>
+        <div class="spu">7417767866911045764<br/>圆形男女通用老花眼镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.62</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.97</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>39.48</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>12.23%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53a4afuaaaryaftx6n3rurubyelidqawsa.f0.mp4?dis_k=8bff9401f8bc1edab75025ce46362c46&amp;dis_t=1775043485&amp;m=ca2d426d4d16b4cbc4822787bb054f7f&amp;sha256=051c7ac6f97bb3fc9da48164ca3192f66bc671ad8f49520ba47dabd56bca58b7" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53b4aryaabaqaawun65burwdyedqhqchca.f0.mp4?dis_k=78c119369e1e861188cf536a7cf8c0f6&amp;dis_t=1774132437&amp;m=7f3200d07df4874c2bca50f5ba1dcbc1&amp;sha256=14cb74cdf6793b30739c430586811229d6176ed4633c6ccf7d8409bf98774fb1" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -714,25 +678,26 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-3">3</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3yuaseaabb4af43djhnurxrieelcqcisa.f0.mp4?dis_k=d2a73f3d7d07a8f60fd8e4d4f885e7d2&amp;dis_t=1774590286&amp;m=5b88165519ad7f885135782f7412511e&amp;sha256=7dd0ad3dafb00c4e096cab9f45458414e19fa4475ec8d9bef60eec057ab2416e" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="超清防蓝光高档老花镜时尚简约显年轻优雅大气" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3yuaseaabb4af43djhnurxrieelcqcisa.f0.mp4?dis_k=d2a73f3d7d07a8f60fd8e4d4f885e7d2&amp;dis_t=1774590286&amp;m=5b88165519ad7f885135782f7412511e&amp;sha256=7dd0ad3dafb00c4e096cab9f45458414e19fa4475ec8d9bef60eec057ab2416e" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc37abcqaacjaagy6nl65urr6aefd4aekca.f0.mp4?dis_k=0d9fda4736e1fa0fab4a0d557810a733&amp;dis_t=1772700861&amp;m=69723806d4cc27b265d41c741e70d510&amp;sha256=860d7e04ccfd4eeb238a61bce2c2d0bef870e1bc80d28fce7e0e94c5b43d59bf" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="BAPORSSA/巴宝莎时尚素颜镜美妆太阳镜防紫外线墨镜气质大框太阳镜轻奢不挑脸型" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc37abcqaacjaagy6nl65urr6aefd4aekca.f0.mp4?dis_k=0d9fda4736e1fa0fab4a0d557810a733&amp;dis_t=1772700861&amp;m=69723806d4cc27b265d41c741e70d510&amp;sha256=860d7e04ccfd4eeb238a61bce2c2d0bef870e1bc80d28fce7e0e94c5b43d59bf" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #6</span>
+          <span class="origin-rank">原始排序 #11</span>
         </div>
-        <h3 class="name">超清防蓝光高档老花镜时尚简约显年轻优雅大气</h3>
-        <div class="spu">274673461<br/>麦子眼镜优选</div>
+        <h3 class="name">BAPORSSA/巴宝莎时尚素颜镜美妆太阳镜防紫外线墨镜气质大框太阳镜轻奢不挑脸型</h3>
+        <div class="spu">1537477417983034253<br/>巴宝莎/BAPORSSA太阳镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.60</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-19.98%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.75</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>79.00</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>5.17%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3yuaseaabb4af43djhnurxrieelcqcisa.f0.mp4?dis_k=d2a73f3d7d07a8f60fd8e4d4f885e7d2&amp;dis_t=1774590286&amp;m=5b88165519ad7f885135782f7412511e&amp;sha256=7dd0ad3dafb00c4e096cab9f45458414e19fa4475ec8d9bef60eec057ab2416e" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc37abcqaacjaagy6nl65urr6aefd4aekca.f0.mp4?dis_k=0d9fda4736e1fa0fab4a0d557810a733&amp;dis_t=1772700861&amp;m=69723806d4cc27b265d41c741e70d510&amp;sha256=860d7e04ccfd4eeb238a61bce2c2d0bef870e1bc80d28fce7e0e94c5b43d59bf" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -741,26 +706,25 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-normal">4</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3pabhoaacpeag43kcvfubq6aeo54ae52a.f0.mp4?dis_k=717c1117fc20e380698cba8077b739a5&amp;dis_t=1754726568&amp;sha256=81d823ad192cf418ae1cbac4cdefbbf3f94a58370d7ff27ba6d5680cab9f6252&amp;m=4fd38be43d5c2f6cf1c4b4638cb41ecf" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="[高清偏光]太阳镜护眼高定细闪自带妆容感时尚墨镜防紫外线显脸小太阳镜" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3pabhoaacpeag43kcvfubq6aeo54ae52a.f0.mp4?dis_k=717c1117fc20e380698cba8077b739a5&amp;dis_t=1754726568&amp;sha256=81d823ad192cf418ae1cbac4cdefbbf3f94a58370d7ff27ba6d5680cab9f6252&amp;m=4fd38be43d5c2f6cf1c4b4638cb41ecf" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
+      <a class="media-box" href="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/6976d0050004bb191bb4ee92c30876150000008d00004eec?ck=076b13725d0bcd2b962b633c0d356964&amp;m=076b13725d0bcd2b962b633c0d356964&amp;sha256=3113537cf469b201eb1cbf57522229b2dd3518fea1a2a03cb9671a6deeaed6d6" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+        <img class="media-img" src="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/6976d0050004bb191bb4ee92c30876150000008d00004eec?ck=076b13725d0bcd2b962b633c0d356964&amp;m=076b13725d0bcd2b962b633c0d356964&amp;sha256=3113537cf469b201eb1cbf57522229b2dd3518fea1a2a03cb9671a6deeaed6d6" alt="Mar.轻便光学镜-C(含镜片) 远视/近视眼镜男女同款配眼镜片" loading="lazy" referrerpolicy="no-referrer" />
+        <span class="media-tag image">图片素材</span>
+      </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #9</span>
+          <span class="origin-rank">原始排序 #14</span>
         </div>
-        <h3 class="name">[高清偏光]太阳镜护眼高定细闪自带妆容感时尚墨镜防紫外线显脸小太阳镜</h3>
-        <div class="spu">78044309<br/>美琳轻奢太阳墨镜</div>
+        <h3 class="name">Mar.轻便光学镜-C(含镜片) 远视/近视眼镜男女同款配眼镜片</h3>
+        <div class="spu">2474143145508493855<br/>男女通用近视眼镜/光学眼镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.06</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>0.60</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>391.20</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>0%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3pabhoaacpeag43kcvfubq6aeo54ae52a.f0.mp4?dis_k=717c1117fc20e380698cba8077b739a5&amp;dis_t=1754726568&amp;sha256=81d823ad192cf418ae1cbac4cdefbbf3f94a58370d7ff27ba6d5680cab9f6252&amp;m=4fd38be43d5c2f6cf1c4b4638cb41ecf" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
+          <a class="action primary" href="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/6976d0050004bb191bb4ee92c30876150000008d00004eec?ck=076b13725d0bcd2b962b633c0d356964&amp;m=076b13725d0bcd2b962b633c0d356964&amp;sha256=3113537cf469b201eb1cbf57522229b2dd3518fea1a2a03cb9671a6deeaed6d6" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <span class="action ghost">图片直链</span>
         </div>
       </div>
     </article>
@@ -768,25 +732,26 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-normal">5</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3cabskaadbualr6viofurseaeeuiagjka.f0.mp4?dis_k=41a35db7ea4d7f340914463f2927e89f&amp;dis_t=1772854574&amp;m=dc978f99193ced8e74dce6bbc4f43cb3&amp;sha256=63e673c3a7dfcec6560308f086b0b722834648ea8ab5fd5b9d934fc4d956d65b" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="李若彤同款Baporssa新款时髦前卫未来风一体式无框太阳镜猫眼时髦眼镜高级感墨镜" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3cabskaadbualr6viofurseaeeuiagjka.f0.mp4?dis_k=41a35db7ea4d7f340914463f2927e89f&amp;dis_t=1772854574&amp;m=dc978f99193ced8e74dce6bbc4f43cb3&amp;sha256=63e673c3a7dfcec6560308f086b0b722834648ea8ab5fd5b9d934fc4d956d65b" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53x4bqwaadhuam55vxy5urtpyebo7qgc2a.f0.mp4?dis_k=37233e1b699de43ce65611434f663ff7&amp;dis_t=1773454733&amp;m=409c3747bee9e9c096eb7c7eec85272b&amp;sha256=01de290d776190624c8f1610e3e01d3a5a1be7551a77f9a3613a424365ec8ebb" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="时尚百搭墨镜素颜度假风休闲街拍高质感太阳镜猫眼框" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53x4bqwaadhuam55vxy5urtpyebo7qgc2a.f0.mp4?dis_k=37233e1b699de43ce65611434f663ff7&amp;dis_t=1773454733&amp;m=409c3747bee9e9c096eb7c7eec85272b&amp;sha256=01de290d776190624c8f1610e3e01d3a5a1be7551a77f9a3613a424365ec8ebb" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #13</span>
+          <span class="origin-rank">原始排序 #19</span>
         </div>
-        <h3 class="name">李若彤同款Baporssa新款时髦前卫未来风一体式无框太阳镜猫眼时髦眼镜高级感墨镜</h3>
-        <div class="spu">627915<br/>巴宝莎韩老板</div>
+        <h3 class="name">时尚百搭墨镜素颜度假风休闲街拍高质感太阳镜猫眼框</h3>
+        <div class="spu">3556467813879923139<br/>猫眼形男太阳镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>3.09</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.42</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>79.00</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>5.88%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3cabskaadbualr6viofurseaeeuiagjka.f0.mp4?dis_k=41a35db7ea4d7f340914463f2927e89f&amp;dis_t=1772854574&amp;m=dc978f99193ced8e74dce6bbc4f43cb3&amp;sha256=63e673c3a7dfcec6560308f086b0b722834648ea8ab5fd5b9d934fc4d956d65b" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53x4bqwaadhuam55vxy5urtpyebo7qgc2a.f0.mp4?dis_k=37233e1b699de43ce65611434f663ff7&amp;dis_t=1773454733&amp;m=409c3747bee9e9c096eb7c7eec85272b&amp;sha256=01de290d776190624c8f1610e3e01d3a5a1be7551a77f9a3613a424365ec8ebb" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -795,25 +760,26 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-normal">6</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53j4ahsaaauaaipl6alvurutyepfhqa6ka.f0.mp4?dis_k=298d3887b6355c3bca950db13d6a4981&amp;dis_t=1774255866&amp;m=a7b8905ecbf4a1eb494713842d30f076&amp;sha256=c97ebc34afd3ac9bee45ca0c39c04f44e39733fa6c6aeb7760383aeb304295f9" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="巴宝莎Baporssa时尚猫眼高级感太阳镜修饰脸型高清尼龙镜片防晒百搭" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53j4ahsaaauaaipl6alvurutyepfhqa6ka.f0.mp4?dis_k=298d3887b6355c3bca950db13d6a4981&amp;dis_t=1774255866&amp;m=a7b8905ecbf4a1eb494713842d30f076&amp;sha256=c97ebc34afd3ac9bee45ca0c39c04f44e39733fa6c6aeb7760383aeb304295f9" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53umb3saadwiaf3rwdanurtiyexgrqhoka.f0.mp4?dis_k=b01cbb5020639c3ac3a46ecb144ea2cb&amp;dis_t=1774248985&amp;m=a77b9efc2d7cc3ce8b1fef884cbd6ece" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="高档变色老花镜男时尚显年轻老花眼镜中老年高清防蓝光抗疲劳235" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53umb3saadwiaf3rwdanurtiyexgrqhoka.f0.mp4?dis_k=b01cbb5020639c3ac3a46ecb144ea2cb&amp;dis_t=1774248985&amp;m=a77b9efc2d7cc3ce8b1fef884cbd6ece" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #23</span>
+          <span class="origin-rank">原始排序 #39</span>
         </div>
-        <h3 class="name">巴宝莎Baporssa时尚猫眼高级感太阳镜修饰脸型高清尼龙镜片防晒百搭</h3>
-        <div class="spu">627748<br/>Baporssa眼镜</div>
+        <h3 class="name">高档变色老花镜男时尚显年轻老花眼镜中老年高清防蓝光抗疲劳235</h3>
+        <div class="spu">2254740224588699424<br/>男老花眼镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.40</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.24</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>59.00</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>5.56%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53j4ahsaaauaaipl6alvurutyepfhqa6ka.f0.mp4?dis_k=298d3887b6355c3bca950db13d6a4981&amp;dis_t=1774255866&amp;m=a7b8905ecbf4a1eb494713842d30f076&amp;sha256=c97ebc34afd3ac9bee45ca0c39c04f44e39733fa6c6aeb7760383aeb304295f9" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53umb3saadwiaf3rwdanurtiyexgrqhoka.f0.mp4?dis_k=b01cbb5020639c3ac3a46ecb144ea2cb&amp;dis_t=1774248985&amp;m=a77b9efc2d7cc3ce8b1fef884cbd6ece" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -822,25 +788,26 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-normal">7</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53haaayaaap4aj5yzganuruoaebq4aadca.f0.mp4?dis_k=a99f63c6d9e9d268526efe3eb843934e&amp;dis_t=1766988721&amp;m=534c9aa4b6dbbdcd9afd6c44a1fcc0f8&amp;sha256=b7ff19328967c593e9a09c1200118027642dff44516eb81e16337461d851fe74" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="攸迪卡时尚日夜多用太阳镜防紫外线墨镜" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53haaayaaap4aj5yzganuruoaebq4aadca.f0.mp4?dis_k=a99f63c6d9e9d268526efe3eb843934e&amp;dis_t=1766988721&amp;m=534c9aa4b6dbbdcd9afd6c44a1fcc0f8&amp;sha256=b7ff19328967c593e9a09c1200118027642dff44516eb81e16337461d851fe74" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53fyb5iaad54afhgwazfurslqe2qxahvca.f0.mp4?dis_k=a07abd722972bf8f3e18311e55620d19&amp;dis_t=1774421961&amp;m=cffc0df2655ab5e26732100117c0a3e5" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="高档变色老花镜男时尚显年轻老花眼镜中老年高清防蓝光抗疲劳2-235" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53fyb5iaad54afhgwazfurslqe2qxahvca.f0.mp4?dis_k=a07abd722972bf8f3e18311e55620d19&amp;dis_t=1774421961&amp;m=cffc0df2655ab5e26732100117c0a3e5" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #26</span>
+          <span class="origin-rank">原始排序 #57</span>
         </div>
-        <h3 class="name">攸迪卡时尚日夜多用太阳镜防紫外线墨镜</h3>
-        <div class="spu">251616095<br/>攸迪卡高端眼镜</div>
+        <h3 class="name">高档变色老花镜男时尚显年轻老花眼镜中老年高清防蓝光抗疲劳2-235</h3>
+        <div class="spu">2254740224588699424<br/>男老花眼镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.67</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.30</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>59.75</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>8.33%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53haaayaaap4aj5yzganuruoaebq4aadca.f0.mp4?dis_k=a99f63c6d9e9d268526efe3eb843934e&amp;dis_t=1766988721&amp;m=534c9aa4b6dbbdcd9afd6c44a1fcc0f8&amp;sha256=b7ff19328967c593e9a09c1200118027642dff44516eb81e16337461d851fe74" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53fyb5iaad54afhgwazfurslqe2qxahvca.f0.mp4?dis_k=a07abd722972bf8f3e18311e55620d19&amp;dis_t=1774421961&amp;m=cffc0df2655ab5e26732100117c0a3e5" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -849,8 +816,64 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-normal">8</div>
       
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3yaaaiaaamyaedu3grrurvqaeataaabca.f0.mp4?dis_k=2734190e456a591ef01de85d65414b8e&amp;dis_t=1768310186&amp;m=1c1035d77c1247d95daa1ec3c731661c" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="BAPORSSA/巴宝莎新款时髦未来风一体式墨镜无边框太阳镜修饰脸型" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3yaaaiaaamyaedu3grrurvqaeataaabca.f0.mp4?dis_k=2734190e456a591ef01de85d65414b8e&amp;dis_t=1768310186&amp;m=1c1035d77c1247d95daa1ec3c731661c" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+      <span class="play-badge">▶</span>
+      <span class="media-tag video">视频商品图</span>
+    </a>
+      <div class="content">
+        <div class="category-row">
+          <span class="pill">眼镜</span>
+          <span class="origin-rank">原始排序 #70</span>
+        </div>
+        <h3 class="name">BAPORSSA/巴宝莎新款时髦未来风一体式墨镜无边框太阳镜修饰脸型</h3>
+        <div class="spu">1537477417983034253<br/>巴宝莎/BAPORSSA太阳镜</div>
+        <div class="metrics">
+          <div class="metric"><span>下单ROI</span><strong>1.10</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>238.00</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>0%</strong></div>
+        </div>
+        <div class="actions">
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3yaaaiaaamyaedu3grrurvqaeataaabca.f0.mp4?dis_k=2734190e456a591ef01de85d65414b8e&amp;dis_t=1768310186&amp;m=1c1035d77c1247d95daa1ec3c731661c" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <span class="action ghost">视频直链</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-category="眼镜">
+      <div class="rank rank-normal">9</div>
+      
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53tub5caad4maavmnysjurthie2goqhuka.f0.mp4?dis_k=4ff9adbed6f1ed32d12eadf1fbe5da30&amp;dis_t=1773919111&amp;m=dc1705b450aa63867242700df295c196" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="[设计师新款]男士墨镜开车驾驶防晒防紫外线强光太阳镜322-1" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53tub5caad4maavmnysjurthie2goqhuka.f0.mp4?dis_k=4ff9adbed6f1ed32d12eadf1fbe5da30&amp;dis_t=1773919111&amp;m=dc1705b450aa63867242700df295c196" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+      <span class="play-badge">▶</span>
+      <span class="media-tag video">视频商品图</span>
+    </a>
+      <div class="content">
+        <div class="category-row">
+          <span class="pill">眼镜</span>
+          <span class="origin-rank">原始排序 #71</span>
+        </div>
+        <h3 class="name">[设计师新款]男士墨镜开车驾驶防晒防紫外线强光太阳镜322-1</h3>
+        <div class="spu">3196093912089903762<br/>男太阳镜</div>
+        <div class="metrics">
+          <div class="metric"><span>下单ROI</span><strong>1.70</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>60.67</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>0%</strong></div>
+        </div>
+        <div class="actions">
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53tub5caad4maavmnysjurthie2goqhuka.f0.mp4?dis_k=4ff9adbed6f1ed32d12eadf1fbe5da30&amp;dis_t=1773919111&amp;m=dc1705b450aa63867242700df295c196" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <span class="action ghost">视频直链</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-category="眼镜">
+      <div class="rank rank-normal">10</div>
+      
     <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53bmasyaabseadxoqwxjurwcyefqfqclca.f0.mp4?dis_k=0eba9a7a8963b2e41f8f3f1673f4f772&amp;dis_t=1763121417&amp;m=d6e5e23c9e065bd893244e1e1642c7d6&amp;sha256=b2a321dc4b7bb632f03d48dc2be0f4d50c19091d0f951fef090cb79ed1f81fc7" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="【明星同款】宝朴户外钓鱼专用偏光太阳镜可调节抗冲击路亚" loading="lazy" referrerpolicy="no-referrer" />
+      <img class="media-thumb" alt="宝朴钓鱼眼镜看鱼看水底防晒路亚刺鱼大师级飞行员眼镜刺鱼看漂" loading="lazy" referrerpolicy="no-referrer" />
       <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53bmasyaabseadxoqwxjurwcyefqfqclca.f0.mp4?dis_k=0eba9a7a8963b2e41f8f3f1673f4f772&amp;dis_t=1763121417&amp;m=d6e5e23c9e065bd893244e1e1642c7d6&amp;sha256=b2a321dc4b7bb632f03d48dc2be0f4d50c19091d0f951fef090cb79ed1f81fc7" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
@@ -858,347 +881,17 @@
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #36</span>
+          <span class="origin-rank">原始排序 #77</span>
         </div>
-        <h3 class="name">【明星同款】宝朴户外钓鱼专用偏光太阳镜可调节抗冲击路亚</h3>
-        <div class="spu">29744965<br/>宝朴BAOPU钓鱼专用太阳镜</div>
+        <h3 class="name">宝朴钓鱼眼镜看鱼看水底防晒路亚刺鱼大师级飞行员眼镜刺鱼看漂</h3>
+        <div class="spu">3042343832139100797<br/>宝朴太阳镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>3.56</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-8.33%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.08</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>199.00</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>0%</strong></div>
         </div>
         <div class="actions">
           <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53bmasyaabseadxoqwxjurwcyefqfqclca.f0.mp4?dis_k=0eba9a7a8963b2e41f8f3f1673f4f772&amp;dis_t=1763121417&amp;m=d6e5e23c9e065bd893244e1e1642c7d6&amp;sha256=b2a321dc4b7bb632f03d48dc2be0f4d50c19091d0f951fef090cb79ed1f81fc7" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="眼镜">
-      <div class="rank rank-normal">9</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3t4abmaaay4abwbfzbfurvhyec2pqafsa.f0.mp4?dis_k=78d3f8dfcf1f9413bdf42173474bdedb&amp;dis_t=1773735284&amp;m=2d7103e8c7e6de6f740b60a46b54a180&amp;sha256=3ce36380dbd35fe0ba770058e58a89d686ae9a0db121ac1c068b21d00004df40" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="时尚百搭墨镜素颜度假风休闲街拍高质感太阳镜猫眼框" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3t4abmaaay4abwbfzbfurvhyec2pqafsa.f0.mp4?dis_k=78d3f8dfcf1f9413bdf42173474bdedb&amp;dis_t=1773735284&amp;m=2d7103e8c7e6de6f740b60a46b54a180&amp;sha256=3ce36380dbd35fe0ba770058e58a89d686ae9a0db121ac1c068b21d00004df40" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #45</span>
-        </div>
-        <h3 class="name">时尚百搭墨镜素颜度假风休闲街拍高质感太阳镜猫眼框</h3>
-        <div class="spu">175156716<br/>猫眼形男太阳镜</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.97</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-16.84%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3t4abmaaay4abwbfzbfurvhyec2pqafsa.f0.mp4?dis_k=78d3f8dfcf1f9413bdf42173474bdedb&amp;dis_t=1773735284&amp;m=2d7103e8c7e6de6f740b60a46b54a180&amp;sha256=3ce36380dbd35fe0ba770058e58a89d686ae9a0db121ac1c068b21d00004df40" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="眼镜">
-      <div class="rank rank-normal">10</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53yaankaaazaaikfn3fvurvqae2xaabvka.f0.mp4?dis_k=5080b27d8e50dd4a66df955c4b0ecbda&amp;dis_t=1773903057&amp;m=53f092c66fea62fc6e2d736c7d12b18a&amp;sha256=b307ef1aa975ab77c6984cce15fc90da80ef437fcce6e86e2698a2d01ed4fc94" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="黑框变色老花镜" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53yaankaaazaaikfn3fvurvqae2xaabvka.f0.mp4?dis_k=5080b27d8e50dd4a66df955c4b0ecbda&amp;dis_t=1773903057&amp;m=53f092c66fea62fc6e2d736c7d12b18a&amp;sha256=b307ef1aa975ab77c6984cce15fc90da80ef437fcce6e86e2698a2d01ed4fc94" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #53</span>
-        </div>
-        <h3 class="name">黑框变色老花镜</h3>
-        <div class="spu">150977104<br/>男老花眼镜</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.29</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+67.26%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53yaankaaazaaikfn3fvurvqae2xaabvka.f0.mp4?dis_k=5080b27d8e50dd4a66df955c4b0ecbda&amp;dis_t=1773903057&amp;m=53f092c66fea62fc6e2d736c7d12b18a&amp;sha256=b307ef1aa975ab77c6984cce15fc90da80ef437fcce6e86e2698a2d01ed4fc94" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article></div>
-    </section>
-
-    <section class="panel" data-panel="皮带">
-      <div class="section-title">
-        <h2>皮带榜单</h2>
-        <span>已去重，保留素材有效且链接可打开的商品</span>
-      </div>
-      <div class="grid">
-    <article class="card" data-category="皮带">
-      <div class="rank rank-1">1</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3zebw4aadlyafjz6nuburtsien3eqg3sa.f0.mp4?dis_k=25b2460dda11234ce63bfc6f66c3e503&amp;dis_t=1775123643&amp;m=dfc81627a322d9fc810b589795875f1f&amp;sha256=d6c5506fb37a24e88ab6d18539eb7c7a32e53e2179cbcf047da5f4c0348ce5ce" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="爆款塑身女士收腹腰带H" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3zebw4aadlyafjz6nuburtsien3eqg3sa.f0.mp4?dis_k=25b2460dda11234ce63bfc6f66c3e503&amp;dis_t=1775123643&amp;m=dfc81627a322d9fc810b589795875f1f&amp;sha256=d6c5506fb37a24e88ab6d18539eb7c7a32e53e2179cbcf047da5f4c0348ce5ce" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #10</span>
-        </div>
-        <h3 class="name">爆款塑身女士收腹腰带H</h3>
-        <div class="spu">215121416<br/>塑身腰封/腰夹</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.91</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-20.12%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3zebw4aadlyafjz6nuburtsien3eqg3sa.f0.mp4?dis_k=25b2460dda11234ce63bfc6f66c3e503&amp;dis_t=1775123643&amp;m=dfc81627a322d9fc810b589795875f1f&amp;sha256=d6c5506fb37a24e88ab6d18539eb7c7a32e53e2179cbcf047da5f4c0348ce5ce" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-2">2</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc354cguaaefqabpp6plvur53yenlxqi2sa.f0.mp4?dis_k=6c2dfbd4259c97b85107c3d95df094f6&amp;dis_t=1774943805&amp;m=118c26634914c54eeb3389c95c65c6df&amp;sha256=326a96cf6db6d2332d22105136321ea3c2ebfc1d41eee39027d237a5148ae654" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="爆款塑身收腹腰带" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc354cguaaefqabpp6plvur53yenlxqi2sa.f0.mp4?dis_k=6c2dfbd4259c97b85107c3d95df094f6&amp;dis_t=1774943805&amp;m=118c26634914c54eeb3389c95c65c6df&amp;sha256=326a96cf6db6d2332d22105136321ea3c2ebfc1d41eee39027d237a5148ae654" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #18</span>
-        </div>
-        <h3 class="name">爆款塑身收腹腰带</h3>
-        <div class="spu">215121416<br/>塑身腰封/腰夹</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.80</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-2.25%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc354cguaaefqabpp6plvur53yenlxqi2sa.f0.mp4?dis_k=6c2dfbd4259c97b85107c3d95df094f6&amp;dis_t=1774943805&amp;m=118c26634914c54eeb3389c95c65c6df&amp;sha256=326a96cf6db6d2332d22105136321ea3c2ebfc1d41eee39027d237a5148ae654" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-3">3</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3dmce6aae3yafpf6oo5ur4gyej4nqit2a.f0.mp4?dis_k=a795e0f5a7c66927b96133b15b59a6fd&amp;dis_t=1774852303&amp;m=5f0c78486c84b7336f430e2f146e0670" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="女式收腹腰带健身收腹运动护腰带" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3dmce6aae3yafpf6oo5ur4gyej4nqit2a.f0.mp4?dis_k=a795e0f5a7c66927b96133b15b59a6fd&amp;dis_t=1774852303&amp;m=5f0c78486c84b7336f430e2f146e0670" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #60</span>
-        </div>
-        <h3 class="name">女式收腹腰带健身收腹运动护腰带</h3>
-        <div class="spu">2979393<br/>运动护腰</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.03</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-5.20%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3dmce6aae3yafpf6oo5ur4gyej4nqit2a.f0.mp4?dis_k=a795e0f5a7c66927b96133b15b59a6fd&amp;dis_t=1774852303&amp;m=5f0c78486c84b7336f430e2f146e0670" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">4</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53bicegaaenaaocoopsvur4cqeimfaiq2a.f0.mp4?dis_k=db13591f722f7791e51d6a652e1f27f3&amp;dis_t=1775204884&amp;m=bc5bedcbdcab6f5bde936a2f3bef6496&amp;sha256=06de1a59d6dc16a8e65d38d6f934b90a78805ff5606b014f451fc1be0a3669bc" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="女士收腹腰带收腹运动护腰" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53bicegaaenaaocoopsvur4cqeimfaiq2a.f0.mp4?dis_k=db13591f722f7791e51d6a652e1f27f3&amp;dis_t=1775204884&amp;m=bc5bedcbdcab6f5bde936a2f3bef6496&amp;sha256=06de1a59d6dc16a8e65d38d6f934b90a78805ff5606b014f451fc1be0a3669bc" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #93</span>
-        </div>
-        <h3 class="name">女士收腹腰带收腹运动护腰</h3>
-        <div class="spu">2979393<br/>运动护腰</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.06</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-29.92%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53bicegaaenaaocoopsvur4cqeimfaiq2a.f0.mp4?dis_k=db13591f722f7791e51d6a652e1f27f3&amp;dis_t=1775204884&amp;m=bc5bedcbdcab6f5bde936a2f3bef6496&amp;sha256=06de1a59d6dc16a8e65d38d6f934b90a78805ff5606b014f451fc1be0a3669bc" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">5</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b532ibbqaackyaevt5zb5urruqeddjaegca.f0.mp4?dis_k=8a9bd727a4aebfc6d546eb6a43208e3e&amp;dis_t=1773992503&amp;m=323460e09b0312b3b9b2f16fc93471ab&amp;sha256=ddadd6215fef951db6110115b3607ca563040012d3a6189ae08f63d5537a12e9" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="【成功男人皮带】新款男士腰带针扣经典商务休闲皮带时尚百搭WY" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b532ibbqaackyaevt5zb5urruqeddjaegca.f0.mp4?dis_k=8a9bd727a4aebfc6d546eb6a43208e3e&amp;dis_t=1773992503&amp;m=323460e09b0312b3b9b2f16fc93471ab&amp;sha256=ddadd6215fef951db6110115b3607ca563040012d3a6189ae08f63d5537a12e9" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #98</span>
-        </div>
-        <h3 class="name">【成功男人皮带】新款男士腰带针扣经典商务休闲皮带时尚百搭WY</h3>
-        <div class="spu">150804025<br/>男腰带</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.52</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-7.99%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b532ibbqaackyaevt5zb5urruqeddjaegca.f0.mp4?dis_k=8a9bd727a4aebfc6d546eb6a43208e3e&amp;dis_t=1773992503&amp;m=323460e09b0312b3b9b2f16fc93471ab&amp;sha256=ddadd6215fef951db6110115b3607ca563040012d3a6189ae08f63d5537a12e9" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">6</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53qmaqgaabsiae2qgdarurxayeaobqca2a.f0.mp4?dis_k=3e3cb9ae971e09561dce29cebf51304e&amp;dis_t=1774341655&amp;m=9ae8620dc9066057e25f2014f5fdee9b&amp;sha256=3f7969fc72ae5596f5cbf056ed0b1a821bfda213c1002d44308d2c657e4cf0aa" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="Calermkeens国家专利《六年不断》女士皮带自动扣真皮腰带时尚百搭裤带" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53qmaqgaabsiae2qgdarurxayeaobqca2a.f0.mp4?dis_k=3e3cb9ae971e09561dce29cebf51304e&amp;dis_t=1774341655&amp;m=9ae8620dc9066057e25f2014f5fdee9b&amp;sha256=3f7969fc72ae5596f5cbf056ed0b1a821bfda213c1002d44308d2c657e4cf0aa" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #113</span>
-        </div>
-        <h3 class="name">Calermkeens国家专利《六年不断》女士皮带自动扣真皮腰带时尚百搭裤带</h3>
-        <div class="spu">321062130<br/>CalermKeens官方专柜店</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.94</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53qmaqgaabsiae2qgdarurxayeaobqca2a.f0.mp4?dis_k=3e3cb9ae971e09561dce29cebf51304e&amp;dis_t=1774341655&amp;m=9ae8620dc9066057e25f2014f5fdee9b&amp;sha256=3f7969fc72ae5596f5cbf056ed0b1a821bfda213c1002d44308d2c657e4cf0aa" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">7</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53bqcacaaeaqajnafsafub4daeaegaiaka.f0.mp4?dis_k=7fc7e3e4d2206635e3f9396115d812ea&amp;dis_t=1756796687&amp;m=d297eeb829c64fa9921b68e785f7ea23" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="十年不断裂《内穿款》男士皮带男复古无夹层真牛皮内穿自动扣裤腰带送爸爸" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53bqcacaaeaqajnafsafub4daeaegaiaka.f0.mp4?dis_k=7fc7e3e4d2206635e3f9396115d812ea&amp;dis_t=1756796687&amp;m=d297eeb829c64fa9921b68e785f7ea23" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #124</span>
-        </div>
-        <h3 class="name">十年不断裂《内穿款》男士皮带男复古无夹层真牛皮内穿自动扣裤腰带送爸爸</h3>
-        <div class="spu">156571794<br/>Calerm Keens腰带/皮带/腰链</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.09</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>0.00%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53bqcacaaeaqajnafsafub4daeaegaiaka.f0.mp4?dis_k=7fc7e3e4d2206635e3f9396115d812ea&amp;dis_t=1756796687&amp;m=d297eeb829c64fa9921b68e785f7ea23" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">8</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3kibw6aadpuani45ylfursuqen5jag32a.f0.mp4?dis_k=caff9880dfb007fc52bf2ecef8dc1747&amp;dis_t=1773910839&amp;m=3f3604a7877499766d19ee4a56bc9280&amp;sha256=90261672ab649a16456082d4a20d464c4c5f184e88b7cc93b669063e0021c609" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="新款男士鳄鱼纹无牙自动扣内穿商务腰带时尚裤腰带个性中年" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3kibw6aadpuani45ylfursuqen5jag32a.f0.mp4?dis_k=caff9880dfb007fc52bf2ecef8dc1747&amp;dis_t=1773910839&amp;m=3f3604a7877499766d19ee4a56bc9280&amp;sha256=90261672ab649a16456082d4a20d464c4c5f184e88b7cc93b669063e0021c609" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #129</span>
-        </div>
-        <h3 class="name">新款男士鳄鱼纹无牙自动扣内穿商务腰带时尚裤腰带个性中年</h3>
-        <div class="spu">148329823<br/>真皮男腰带</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.07</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-17.77%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3kibw6aadpuani45ylfursuqen5jag32a.f0.mp4?dis_k=caff9880dfb007fc52bf2ecef8dc1747&amp;dis_t=1773910839&amp;m=3f3604a7877499766d19ee4a56bc9280&amp;sha256=90261672ab649a16456082d4a20d464c4c5f184e88b7cc93b669063e0021c609" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">9</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53qubwuaadoiaf3vgn2furtbienkcqg2sa.f0.mp4?dis_k=73907088d52a2e16106b966898fc09b5&amp;dis_t=1775122506&amp;m=62302126a705637a74dc3cddc6e4af35&amp;sha256=893a272a2afc98a6e9f526dc811c3461edf7f858bba721036e33d34e7f6deaf2" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="【厂家直销】26新款男士微弹战术腰带百搭休闲帆布皮带户外裤带-LQ" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53qubwuaadoiaf3vgn2furtbienkcqg2sa.f0.mp4?dis_k=73907088d52a2e16106b966898fc09b5&amp;dis_t=1775122506&amp;m=62302126a705637a74dc3cddc6e4af35&amp;sha256=893a272a2afc98a6e9f526dc811c3461edf7f858bba721036e33d34e7f6deaf2" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #141</span>
-        </div>
-        <h3 class="name">【厂家直销】26新款男士微弹战术腰带百搭休闲帆布皮带户外裤带-LQ</h3>
-        <div class="spu">603050438<br/>鳄鱼恤/CROCODILE军迷配饰/作训配饰</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.88</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-30.15%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53qubwuaadoiaf3vgn2furtbienkcqg2sa.f0.mp4?dis_k=73907088d52a2e16106b966898fc09b5&amp;dis_t=1775122506&amp;m=62302126a705637a74dc3cddc6e4af35&amp;sha256=893a272a2afc98a6e9f526dc811c3461edf7f858bba721036e33d34e7f6deaf2" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">10</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53aabaqaachiacq5ndvzurqaaebaaaecca.f0.mp4?dis_k=ed6a6746302eeb06e37eac6fc8a8636f&amp;dis_t=1772167230&amp;m=34c107b36af5af0b0760d2bc7f175c84" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="[开年大促 高品质真牛皮]高档内穿自动扣时尚百搭腰带中青年休闲商务裤带潮w" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53aabaqaachiacq5ndvzurqaaebaaaecca.f0.mp4?dis_k=ed6a6746302eeb06e37eac6fc8a8636f&amp;dis_t=1772167230&amp;m=34c107b36af5af0b0760d2bc7f175c84" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #145</span>
-        </div>
-        <h3 class="name">[开年大促 高品质真牛皮]高档内穿自动扣时尚百搭腰带中青年休闲商务裤带潮w</h3>
-        <div class="spu">150802552<br/>腰带/皮带/腰链</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.64</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+12.48%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53aabaqaachiacq5ndvzurqaaebaaaecca.f0.mp4?dis_k=ed6a6746302eeb06e37eac6fc8a8636f&amp;dis_t=1772167230&amp;m=34c107b36af5af0b0760d2bc7f175c84" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1214,25 +907,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-1">1</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53g4ceeaaeyiaodcwhc5ur4nyeii3qiqsa.f0.mp4?dis_k=41fa29a0f87a9b6e34dfd5d7529f1e4b&amp;dis_t=1775039348&amp;m=5fdc785175245ce6406dfdc71db7e677&amp;sha256=72fd15aa03acd0b14e58c7c198950fb68d030fc0d2efd54479a22e54e8775721" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="时尚饰品 &gt; 手饰 &gt; 戒指" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53g4ceeaaeyiaodcwhc5ur4nyeii3qiqsa.f0.mp4?dis_k=41fa29a0f87a9b6e34dfd5d7529f1e4b&amp;dis_t=1775039348&amp;m=5fdc785175245ce6406dfdc71db7e677&amp;sha256=72fd15aa03acd0b14e58c7c198950fb68d030fc0d2efd54479a22e54e8775721" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53uibi6aacliacsegg3jurriqer6rafd2a.f0.mp4?dis_k=2899dc1b50a0ee5c5ad2f8698e755945&amp;dis_t=1774594059&amp;m=568564e81d877e0d0e41c4144b3b6be3&amp;sha256=66cb07d55025ee83d80651fd2e876c15c47ca086f0f1e0eba90590cde82a0503" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="铜合金设计感耳钉玫瑰金色珠珠耳钉女小巧精致清新风耳钉时尚百搭耳饰" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53uibi6aacliacsegg3jurriqer6rafd2a.f0.mp4?dis_k=2899dc1b50a0ee5c5ad2f8698e755945&amp;dis_t=1774594059&amp;m=568564e81d877e0d0e41c4144b3b6be3&amp;sha256=66cb07d55025ee83d80651fd2e876c15c47ca086f0f1e0eba90590cde82a0503" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #2</span>
+          <span class="origin-rank">原始排序 #4</span>
         </div>
-        <h3 class="name">时尚饰品 &gt; 手饰 &gt; 戒指</h3>
-        <div class="spu">177896332<br/>女戒指/指环</div>
+        <h3 class="name">铜合金设计感耳钉玫瑰金色珠珠耳钉女小巧精致清新风耳钉时尚百搭耳饰</h3>
+        <div class="spu">4034850687828636133<br/>女铜合金耳钉</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>0.93</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-29.40%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.20</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>29.86</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>6.01%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53g4ceeaaeyiaodcwhc5ur4nyeii3qiqsa.f0.mp4?dis_k=41fa29a0f87a9b6e34dfd5d7529f1e4b&amp;dis_t=1775039348&amp;m=5fdc785175245ce6406dfdc71db7e677&amp;sha256=72fd15aa03acd0b14e58c7c198950fb68d030fc0d2efd54479a22e54e8775721" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53uibi6aacliacsegg3jurriqer6rafd2a.f0.mp4?dis_k=2899dc1b50a0ee5c5ad2f8698e755945&amp;dis_t=1774594059&amp;m=568564e81d877e0d0e41c4144b3b6be3&amp;sha256=66cb07d55025ee83d80651fd2e876c15c47ca086f0f1e0eba90590cde82a0503" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1241,25 +935,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-2">2</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc374acyaaa5iam4lwnqvurv7yeft7qalca.f0.mp4?dis_k=fdafae7e966537503b606ba0c6268e54&amp;dis_t=1775100506&amp;m=dbe4f59061105d6b1569f4a546c55f32&amp;sha256=0d588e2cf8acc09c83cf4ba87d4f31e9cd00bda84b69ccc3b599f4f5774b9c41" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="【麦玲玲设计】2026年聚-进三合生肖编织貔貅男女同款金发晶挂件生肖用品" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc374acyaaa5iam4lwnqvurv7yeft7qalca.f0.mp4?dis_k=fdafae7e966537503b606ba0c6268e54&amp;dis_t=1775100506&amp;m=dbe4f59061105d6b1569f4a546c55f32&amp;sha256=0d588e2cf8acc09c83cf4ba87d4f31e9cd00bda84b69ccc3b599f4f5774b9c41" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53oabzaaadjiaavnoavfurs4aesbyaheca.f0.mp4?dis_k=a73f71843805a9140b9247416344daba&amp;dis_t=1774426713&amp;m=1e7c6bf49dea874d8218f522f6cae354&amp;sha256=091fd19b3fa117358e584aead25915901475eadbf907e08ec57697e182627231" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="铜合金简约气质福袋项链女时尚款小众轻奢饰品" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53oabzaaadjiaavnoavfurs4aesbyaheca.f0.mp4?dis_k=a73f71843805a9140b9247416344daba&amp;dis_t=1774426713&amp;m=1e7c6bf49dea874d8218f522f6cae354&amp;sha256=091fd19b3fa117358e584aead25915901475eadbf907e08ec57697e182627231" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #12</span>
+          <span class="origin-rank">原始排序 #6</span>
         </div>
-        <h3 class="name">【麦玲玲设计】2026年聚-进三合生肖编织貔貅男女同款金发晶挂件生肖用品</h3>
-        <div class="spu">368807750<br/>麦玲玲Maklinghit</div>
+        <h3 class="name">铜合金简约气质福袋项链女时尚款小众轻奢饰品</h3>
+        <div class="spu">9023593003004817026<br/>女铜合金项链</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.73</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-10.26%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.01</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>40.01</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>22.66%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc374acyaaa5iam4lwnqvurv7yeft7qalca.f0.mp4?dis_k=fdafae7e966537503b606ba0c6268e54&amp;dis_t=1775100506&amp;m=dbe4f59061105d6b1569f4a546c55f32&amp;sha256=0d588e2cf8acc09c83cf4ba87d4f31e9cd00bda84b69ccc3b599f4f5774b9c41" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53oabzaaadjiaavnoavfurs4aesbyaheca.f0.mp4?dis_k=a73f71843805a9140b9247416344daba&amp;dis_t=1774426713&amp;m=1e7c6bf49dea874d8218f522f6cae354&amp;sha256=091fd19b3fa117358e584aead25915901475eadbf907e08ec57697e182627231" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1268,25 +963,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-3">3</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53xqbloaac3yaisr6etburrpaew66afn2a.f0.mp4?dis_k=bfcf811fd8b65e2e53e493c2d50158d8&amp;dis_t=1774599809&amp;m=be4556b3c1b0fc3aab73f1b0a3c67fae&amp;sha256=1598085e58cf9d53e476e76ef752e56b9835ccbc785a97a1e8757caa74f07c5d" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="铜合金新中式银色福袋项链女2026新款网红爆款高级感锁骨链轻奢气质吊坠" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53xqbloaac3yaisr6etburrpaew66afn2a.f0.mp4?dis_k=bfcf811fd8b65e2e53e493c2d50158d8&amp;dis_t=1774599809&amp;m=be4556b3c1b0fc3aab73f1b0a3c67fae&amp;sha256=1598085e58cf9d53e476e76ef752e56b9835ccbc785a97a1e8757caa74f07c5d" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53riaeaaaaciamy4jxfnurvcqeicfaaqca.f0.mp4?dis_k=0ac0d4fd0a232d70b007c4a8fd897a14&amp;dis_t=1774233525&amp;m=7d27a0438b36dd6c5d996f6659876e0d&amp;sha256=b99b52c9114a6df0599b92ebd7b30556b19e330bafea4ab73ccc793c54e0975f" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="【头层牛皮】保罗男士皮带真皮自动扣 2024新款奢侈真皮商务百搭" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53riaeaaaaciamy4jxfnurvcqeicfaaqca.f0.mp4?dis_k=0ac0d4fd0a232d70b007c4a8fd897a14&amp;dis_t=1774233525&amp;m=7d27a0438b36dd6c5d996f6659876e0d&amp;sha256=b99b52c9114a6df0599b92ebd7b30556b19e330bafea4ab73ccc793c54e0975f" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #24</span>
+          <span class="origin-rank">原始排序 #10</span>
         </div>
-        <h3 class="name">铜合金新中式银色福袋项链女2026新款网红爆款高级感锁骨链轻奢气质吊坠</h3>
-        <div class="spu">181529964<br/>女铜合金项链</div>
+        <h3 class="name">【头层牛皮】保罗男士皮带真皮自动扣 2024新款奢侈真皮商务百搭</h3>
+        <div class="spu">2360113904326203422<br/>保罗/POLO SPORT腰带/皮带/腰链</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.20</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+13.28%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.33</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>188.25</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>0%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53xqbloaac3yaisr6etburrpaew66afn2a.f0.mp4?dis_k=bfcf811fd8b65e2e53e493c2d50158d8&amp;dis_t=1774599809&amp;m=be4556b3c1b0fc3aab73f1b0a3c67fae&amp;sha256=1598085e58cf9d53e476e76ef752e56b9835ccbc785a97a1e8757caa74f07c5d" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53riaeaaaaciamy4jxfnurvcqeicfaaqca.f0.mp4?dis_k=0ac0d4fd0a232d70b007c4a8fd897a14&amp;dis_t=1774233525&amp;m=7d27a0438b36dd6c5d996f6659876e0d&amp;sha256=b99b52c9114a6df0599b92ebd7b30556b19e330bafea4ab73ccc793c54e0975f" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1295,25 +991,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">4</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc34eaq4aablaam62gnjzurxyieb3qqcdsa.f0.mp4?dis_k=bf0edcb8af20d531b8cc047395c09e8f&amp;dis_t=1775026707&amp;m=c05a39d611489c0b44e7f716bc18d991&amp;sha256=9b8336d6d05865af862f16b7dcc49aafb578dbc967371b9fae6ad27cf4db4e9b" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="四叶草猫眼项链" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc34eaq4aablaam62gnjzurxyieb3qqcdsa.f0.mp4?dis_k=bf0edcb8af20d531b8cc047395c09e8f&amp;dis_t=1775026707&amp;m=c05a39d611489c0b44e7f716bc18d991&amp;sha256=9b8336d6d05865af862f16b7dcc49aafb578dbc967371b9fae6ad27cf4db4e9b" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3q4aoaaaacuaepx2nlftbvbye4cdqbyca.f0.mp4?dis_k=29ee679808031527e6d40df3c419533d&amp;dis_t=1774493136&amp;m=4a007baaa179e1d461e142eeaeb20fd3&amp;sha256=e9033862e80da2a587ee5ed202f95073b4e17b64d907d501c34305b1ed010d28" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="CIARTUAR/卡西亚 经典款男士针扣皮带 时尚百搭 不挑身材 高档礼盒包装" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3q4aoaaaacuaepx2nlftbvbye4cdqbyca.f0.mp4?dis_k=29ee679808031527e6d40df3c419533d&amp;dis_t=1774493136&amp;m=4a007baaa179e1d461e142eeaeb20fd3&amp;sha256=e9033862e80da2a587ee5ed202f95073b4e17b64d907d501c34305b1ed010d28" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #33</span>
+          <span class="origin-rank">原始排序 #13</span>
         </div>
-        <h3 class="name">四叶草猫眼项链</h3>
-        <div class="spu">255493370<br/>时尚饰品</div>
+        <h3 class="name">CIARTUAR/卡西亚 经典款男士针扣皮带 时尚百搭 不挑身材 高档礼盒包装</h3>
+        <div class="spu">8183465193587584658<br/>男腰带</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.56</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-4.98%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.77</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>300.43</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>11.11%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc34eaq4aablaam62gnjzurxyieb3qqcdsa.f0.mp4?dis_k=bf0edcb8af20d531b8cc047395c09e8f&amp;dis_t=1775026707&amp;m=c05a39d611489c0b44e7f716bc18d991&amp;sha256=9b8336d6d05865af862f16b7dcc49aafb578dbc967371b9fae6ad27cf4db4e9b" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3q4aoaaaacuaepx2nlftbvbye4cdqbyca.f0.mp4?dis_k=29ee679808031527e6d40df3c419533d&amp;dis_t=1774493136&amp;m=4a007baaa179e1d461e142eeaeb20fd3&amp;sha256=e9033862e80da2a587ee5ed202f95073b4e17b64d907d501c34305b1ed010d28" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1322,25 +1019,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">5</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3veckoaaeqiajky6o4rur5kieu6uqjj2a.f0.mp4?dis_k=c9d369585a8e158acd77291f4136f0ce&amp;dis_t=1774858843&amp;m=424a3a6664e8db1f14844d8e92b9709e&amp;sha256=25900cc82a2093e752317c62af35069840ce90f7d6ffea36d1abc13e688ee6e4" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="铜合金银色福袋项链吊坠项链嘴唇锁骨链" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3veckoaaeqiajky6o4rur5kieu6uqjj2a.f0.mp4?dis_k=c9d369585a8e158acd77291f4136f0ce&amp;dis_t=1774858843&amp;m=424a3a6664e8db1f14844d8e92b9709e&amp;sha256=25900cc82a2093e752317c62af35069840ce90f7d6ffea36d1abc13e688ee6e4" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53uqbxaaaduaapotnzxrurtjaeocsag4ca.f0.mp4?dis_k=531c0f5f2f61c996aadb85306ad6ed82&amp;dis_t=1773832871&amp;m=faecda6381359cac59da2c345683098d&amp;sha256=aecf3ba56b7502735b372afb7c4485a897a8e7b123b37d937dbb7ca8acf3b984" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="铜合金【九尾】灵狐戒指国风民族风开口指环气质百搭设计感#925不掉色" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53uqbxaaaduaapotnzxrurtjaeocsag4ca.f0.mp4?dis_k=531c0f5f2f61c996aadb85306ad6ed82&amp;dis_t=1773832871&amp;m=faecda6381359cac59da2c345683098d&amp;sha256=aecf3ba56b7502735b372afb7c4485a897a8e7b123b37d937dbb7ca8acf3b984" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #46</span>
+          <span class="origin-rank">原始排序 #22</span>
         </div>
-        <h3 class="name">铜合金银色福袋项链吊坠项链嘴唇锁骨链</h3>
-        <div class="spu">180937199<br/>男女通用铜合金项链</div>
+        <h3 class="name">铜合金【九尾】灵狐戒指国风民族风开口指环气质百搭设计感#925不掉色</h3>
+        <div class="spu">5736705058979547406<br/>男铜合金戒指/指环</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.89</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+7.26%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.51</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>29.97</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>11.76%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3veckoaaeqiajky6o4rur5kieu6uqjj2a.f0.mp4?dis_k=c9d369585a8e158acd77291f4136f0ce&amp;dis_t=1774858843&amp;m=424a3a6664e8db1f14844d8e92b9709e&amp;sha256=25900cc82a2093e752317c62af35069840ce90f7d6ffea36d1abc13e688ee6e4" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53uqbxaaaduaapotnzxrurtjaeocsag4ca.f0.mp4?dis_k=531c0f5f2f61c996aadb85306ad6ed82&amp;dis_t=1773832871&amp;m=faecda6381359cac59da2c345683098d&amp;sha256=aecf3ba56b7502735b372afb7c4485a897a8e7b123b37d937dbb7ca8acf3b984" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1349,24 +1047,27 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">6</div>
       
-      <a class="media-box" href="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/6915ae6c000cdf3e29644b404464bc1e0000008d00004eec?ck=c1c6288ccd70808c5d93ffca818565b9&amp;m=c1c6288ccd70808c5d93ffca818565b9&amp;sha256=9d3c0fd3f34d4eb7f0ffed989fac4ce50ad4ae1fbf103c79d7e2301c94349ee3" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-        <img class="media-img" src="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/6915ae6c000cdf3e29644b404464bc1e0000008d00004eec?ck=c1c6288ccd70808c5d93ffca818565b9&amp;m=c1c6288ccd70808c5d93ffca818565b9&amp;sha256=9d3c0fd3f34d4eb7f0ffed989fac4ce50ad4ae1fbf103c79d7e2301c94349ee3" alt="[中国黄金China Gold]上等和田玉精致龙凤呈祥月牙龙凤情侣男女士挂件定情吊坠玉佩结婚纪念日礼物" loading="lazy" referrerpolicy="no-referrer" />
-        <span class="media-tag image">图片素材</span>
-      </a>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53mmawqaabraaecgwdwjurwyyenbrqc2ca.f0.mp4?dis_k=529aa2de8c0df50dba1c93237678b3e6&amp;dis_t=1774334126&amp;m=26960ed09371f07b6da714b5b4e82b27&amp;sha256=6d5a7eca404141af7a08cf6e22f7ed43a49f0c25d899fe89d2d646816f07136d" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="蝶羽姿高端男士皮带内穿无牙自动扣腰带男款中青年商务休闲百搭裤带潮流" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53mmawqaabraaecgwdwjurwyyenbrqc2ca.f0.mp4?dis_k=529aa2de8c0df50dba1c93237678b3e6&amp;dis_t=1774334126&amp;m=26960ed09371f07b6da714b5b4e82b27&amp;sha256=6d5a7eca404141af7a08cf6e22f7ed43a49f0c25d899fe89d2d646816f07136d" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+      <span class="play-badge">▶</span>
+      <span class="media-tag video">视频商品图</span>
+    </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #68</span>
+          <span class="origin-rank">原始排序 #25</span>
         </div>
-        <h3 class="name">[中国黄金China Gold]上等和田玉精致龙凤呈祥月牙龙凤情侣男女士挂件定情吊坠玉佩结婚纪念日礼物</h3>
-        <div class="spu">196701522<br/>中国黄金/CHINA GOLD和田玉单吊坠</div>
+        <h3 class="name">蝶羽姿高端男士皮带内穿无牙自动扣腰带男款中青年商务休闲百搭裤带潮流</h3>
+        <div class="spu">5855521872363209126<br/>PU男腰带</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>7.35</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+642.66%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.18</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>19.58</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>5.88%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/6915ae6c000cdf3e29644b404464bc1e0000008d00004eec?ck=c1c6288ccd70808c5d93ffca818565b9&amp;m=c1c6288ccd70808c5d93ffca818565b9&amp;sha256=9d3c0fd3f34d4eb7f0ffed989fac4ce50ad4ae1fbf103c79d7e2301c94349ee3" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">图片直链</span>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53mmawqaabraaecgwdwjurwyyenbrqc2ca.f0.mp4?dis_k=529aa2de8c0df50dba1c93237678b3e6&amp;dis_t=1774334126&amp;m=26960ed09371f07b6da714b5b4e82b27&amp;sha256=6d5a7eca404141af7a08cf6e22f7ed43a49f0c25d899fe89d2d646816f07136d" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <span class="action ghost">视频直链</span>
         </div>
       </div>
     </article>
@@ -1374,24 +1075,27 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">7</div>
       
-      <a class="media-box" href="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/695299fd0006568e0b84d98f5e0cb6150000008d00004eec?ck=6e0e453a06955c9af12d31c9620db640&amp;m=6e0e453a06955c9af12d31c9620db640&amp;sha256=71ea94cd49c7ac1f3b1d4b322876b0fb29dfc7b5ae98dae5065509cb233e3155" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-        <img class="media-img" src="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/695299fd0006568e0b84d98f5e0cb6150000008d00004eec?ck=6e0e453a06955c9af12d31c9620db640&amp;m=6e0e453a06955c9af12d31c9620db640&amp;sha256=71ea94cd49c7ac1f3b1d4b322876b0fb29dfc7b5ae98dae5065509cb233e3155" alt="珍珠白珠圆珠项链 多样性发其一 L0820 甜帅臻选珍珠" loading="lazy" referrerpolicy="no-referrer" />
-        <span class="media-tag image">图片素材</span>
-      </a>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3eebluaacu4abxg5eu5urqiiexiqqfosa.f0.mp4?dis_k=96474793f95fc1b9d495780754deeb04&amp;dis_t=1773824190&amp;m=75b3afe8f4f0512fb9b346f684f9f28f&amp;sha256=b716e353a483d559d805e33042cd9f7026b0f6c522a499f2145bcf2c60ccc4e7" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="《上岸锦鲤》普陀直发 2026年文创锦鲤手绳传统手工文创编织男女款学生考试创意编绳工作仕途文创晋升锦鲤绳" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3eebluaacu4abxg5eu5urqiiexiqqfosa.f0.mp4?dis_k=96474793f95fc1b9d495780754deeb04&amp;dis_t=1773824190&amp;m=75b3afe8f4f0512fb9b346f684f9f28f&amp;sha256=b716e353a483d559d805e33042cd9f7026b0f6c522a499f2145bcf2c60ccc4e7" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+      <span class="play-badge">▶</span>
+      <span class="media-tag video">视频商品图</span>
+    </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #99</span>
+          <span class="origin-rank">原始排序 #30</span>
         </div>
-        <h3 class="name">珍珠白珠圆珠项链 多样性发其一 L0820 甜帅臻选珍珠</h3>
-        <div class="spu">59656133<br/>甜帅藏星阁</div>
+        <h3 class="name">《上岸锦鲤》普陀直发 2026年文创锦鲤手绳传统手工文创编织男女款学生考试创意编绳工作仕途文创晋升锦鲤绳</h3>
+        <div class="spu">4128351877699732434<br/>男女通用手绳</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>5.00</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.65</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>79.54</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>7.69%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/695299fd0006568e0b84d98f5e0cb6150000008d00004eec?ck=6e0e453a06955c9af12d31c9620db640&amp;m=6e0e453a06955c9af12d31c9620db640&amp;sha256=71ea94cd49c7ac1f3b1d4b322876b0fb29dfc7b5ae98dae5065509cb233e3155" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">图片直链</span>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3eebluaacu4abxg5eu5urqiiexiqqfosa.f0.mp4?dis_k=96474793f95fc1b9d495780754deeb04&amp;dis_t=1773824190&amp;m=75b3afe8f4f0512fb9b346f684f9f28f&amp;sha256=b716e353a483d559d805e33042cd9f7026b0f6c522a499f2145bcf2c60ccc4e7" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <span class="action ghost">视频直链</span>
         </div>
       </div>
     </article>
@@ -1399,25 +1103,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">8</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53nuac6aaaqqah55wkvfuru3ief5wqal2a.f0.mp4?dis_k=913faaa7625f52689311502489ce8a13&amp;dis_t=1775211300&amp;m=a6c911e5e848ca3e4a29b9c263889496&amp;sha256=5b92223483e846187f05b5ad6168f6784c889ada47bf16ddaec18446fdb87f6e" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="红色转运珠项链" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53nuac6aaaqqah55wkvfuru3ief5wqal2a.f0.mp4?dis_k=913faaa7625f52689311502489ce8a13&amp;dis_t=1775211300&amp;m=a6c911e5e848ca3e4a29b9c263889496&amp;sha256=5b92223483e846187f05b5ad6168f6784c889ada47bf16ddaec18446fdb87f6e" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53aubt6aadzeamyjgcu5ursbieh4cqgp2a.f0.mp4?dis_k=e5b45c43b4431ae43d52b2feff2e93b6&amp;dis_t=1774320119&amp;m=29271029c5252c4618d365ae08d32003&amp;sha256=6adfb74f627dc328d4eceadc77999d3408e3c456bf8c4c9611cad2e50273822e" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="蝶羽姿新款H扣男士腰带自动皮带百搭商务休闲裤腰带裤带" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53aubt6aadzeamyjgcu5ursbieh4cqgp2a.f0.mp4?dis_k=e5b45c43b4431ae43d52b2feff2e93b6&amp;dis_t=1774320119&amp;m=29271029c5252c4618d365ae08d32003&amp;sha256=6adfb74f627dc328d4eceadc77999d3408e3c456bf8c4c9611cad2e50273822e" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #110</span>
+          <span class="origin-rank">原始排序 #34</span>
         </div>
-        <h3 class="name">红色转运珠项链</h3>
-        <div class="spu">181529964<br/>女铜合金项链</div>
+        <h3 class="name">蝶羽姿新款H扣男士腰带自动皮带百搭商务休闲裤腰带裤带</h3>
+        <div class="spu">5855521872363209126<br/>PU男腰带</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.18</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+1.64%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.77</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>19.90</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>3.66%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53nuac6aaaqqah55wkvfuru3ief5wqal2a.f0.mp4?dis_k=913faaa7625f52689311502489ce8a13&amp;dis_t=1775211300&amp;m=a6c911e5e848ca3e4a29b9c263889496&amp;sha256=5b92223483e846187f05b5ad6168f6784c889ada47bf16ddaec18446fdb87f6e" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53aubt6aadzeamyjgcu5ursbieh4cqgp2a.f0.mp4?dis_k=e5b45c43b4431ae43d52b2feff2e93b6&amp;dis_t=1774320119&amp;m=29271029c5252c4618d365ae08d32003&amp;sha256=6adfb74f627dc328d4eceadc77999d3408e3c456bf8c4c9611cad2e50273822e" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1426,25 +1131,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">9</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53uiafkaaariahe7iaururviqekwraavka.f0.mp4?dis_k=5d791b8fb692efbe3dafbbe7ee32c0aa&amp;dis_t=1761617908&amp;m=ca8d37d7aa876386081f60b6337dccb9&amp;sha256=c2075f61afaa9f74ad96a743bf5b240a3f9f2a2bcb9edbcfcd96898b67737b83" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="白岚银瓦珍珠耳钉925银耳环耳饰耳坠女新款气质原创饰品ED4576" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53uiafkaaariahe7iaururviqekwraavka.f0.mp4?dis_k=5d791b8fb692efbe3dafbbe7ee32c0aa&amp;dis_t=1761617908&amp;m=ca8d37d7aa876386081f60b6337dccb9&amp;sha256=c2075f61afaa9f74ad96a743bf5b240a3f9f2a2bcb9edbcfcd96898b67737b83" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3ueb3waadxyaltav67zurtiiexoqqho2a.f0.mp4?dis_k=9deba4e9b5698cf970853c93c11b954b&amp;dis_t=1773995496&amp;m=de5e80d3ef9ec235f10a90d60b3d5650&amp;sha256=5c2d3f953d11e5453cf9d81462db62c32b4b6fc188fd2c37e2c0a01bca19b1ec" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="铜合金【貔貅染红运】国风开口戒指复古做旧民族风指环新中式戒指" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3ueb3waadxyaltav67zurtiiexoqqho2a.f0.mp4?dis_k=9deba4e9b5698cf970853c93c11b954b&amp;dis_t=1773995496&amp;m=de5e80d3ef9ec235f10a90d60b3d5650&amp;sha256=5c2d3f953d11e5453cf9d81462db62c32b4b6fc188fd2c37e2c0a01bca19b1ec" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #155</span>
+          <span class="origin-rank">原始排序 #35</span>
         </div>
-        <h3 class="name">白岚银瓦珍珠耳钉925银耳环耳饰耳坠女新款气质原创饰品ED4576</h3>
-        <div class="spu">204359491<br/>白岚/BAILAN淡水珍珠珍珠耳钉</div>
+        <h3 class="name">铜合金【貔貅染红运】国风开口戒指复古做旧民族风指环新中式戒指</h3>
+        <div class="spu">4479589774137687191<br/>女铜合金戒指/指环</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>4.45</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+158.33%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.94</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>29.99</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>15.79%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53uiafkaaariahe7iaururviqekwraavka.f0.mp4?dis_k=5d791b8fb692efbe3dafbbe7ee32c0aa&amp;dis_t=1761617908&amp;m=ca8d37d7aa876386081f60b6337dccb9&amp;sha256=c2075f61afaa9f74ad96a743bf5b240a3f9f2a2bcb9edbcfcd96898b67737b83" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3ueb3waadxyaltav67zurtiiexoqqho2a.f0.mp4?dis_k=9deba4e9b5698cf970853c93c11b954b&amp;dis_t=1773995496&amp;m=de5e80d3ef9ec235f10a90d60b3d5650&amp;sha256=5c2d3f953d11e5453cf9d81462db62c32b4b6fc188fd2c37e2c0a01bca19b1ec" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1453,25 +1159,26 @@
     <article class="card" data-category="配饰">
       <div class="rank rank-normal">10</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3auci2aae4uajjkoknfur4bierucqjdka.f0.mp4?dis_k=061058b8caa5e952ffbfe18001c425e0&amp;dis_t=1775114731&amp;m=03a61125157ad68c05175b2c1035ffd9&amp;sha256=72bfc56b9c8fc24c6a0098a3876c847bc3cd5b03be1a53ac2acfa08d425193f7" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="《上岸锦鲤》普陀山文创上岸锦鲤手绳 传统手工编织文创手绳" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3auci2aae4uajjkoknfur4bierucqjdka.f0.mp4?dis_k=061058b8caa5e952ffbfe18001c425e0&amp;dis_t=1775114731&amp;m=03a61125157ad68c05175b2c1035ffd9&amp;sha256=72bfc56b9c8fc24c6a0098a3876c847bc3cd5b03be1a53ac2acfa08d425193f7" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b5374awiaabp4acupy2t5ubx7yemt7qczca.f0.mp4?dis_k=31afa0d59d2f08d4e909cefd7cac340d&amp;dis_t=1759027864&amp;m=7fe27428b6e9501cca9968a06d88acd7&amp;sha256=a0dd32e6073cf7d7d73cdcc02d007b6b80c4dc0d8e7adf451730737f37838611" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="FANZEMARCK 时尚男士牛皮腰带 平滑扣皮带 舒适百搭 高档礼盒装" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b5374awiaabp4acupy2t5ubx7yemt7qczca.f0.mp4?dis_k=31afa0d59d2f08d4e909cefd7cac340d&amp;dis_t=1759027864&amp;m=7fe27428b6e9501cca9968a06d88acd7&amp;sha256=a0dd32e6073cf7d7d73cdcc02d007b6b80c4dc0d8e7adf451730737f37838611" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">配饰</span>
-          <span class="origin-rank">原始排序 #156</span>
+          <span class="origin-rank">原始排序 #38</span>
         </div>
-        <h3 class="name">《上岸锦鲤》普陀山文创上岸锦鲤手绳 传统手工编织文创手绳</h3>
-        <div class="spu">193230021<br/>男女通用手绳</div>
+        <h3 class="name">FANZEMARCK 时尚男士牛皮腰带 平滑扣皮带 舒适百搭 高档礼盒装</h3>
+        <div class="spu">6082872905395771068<br/>真皮男腰带</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>0.98</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+24.76%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.66</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>299.99</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>0%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3auci2aae4uajjkoknfur4bierucqjdka.f0.mp4?dis_k=061058b8caa5e952ffbfe18001c425e0&amp;dis_t=1775114731&amp;m=03a61125157ad68c05175b2c1035ffd9&amp;sha256=72bfc56b9c8fc24c6a0098a3876c847bc3cd5b03be1a53ac2acfa08d425193f7" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b5374awiaabp4acupy2t5ubx7yemt7qczca.f0.mp4?dis_k=31afa0d59d2f08d4e909cefd7cac340d&amp;dis_t=1759027864&amp;m=7fe27428b6e9501cca9968a06d88acd7&amp;sha256=a0dd32e6073cf7d7d73cdcc02d007b6b80c4dc0d8e7adf451730737f37838611" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1480,25 +1187,26 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-1">1</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53oya32aab5iacyvnia5urw5qexv3adpka.f0.mp4?dis_k=40f93cbbd882ba56d92969e4ac82bf62&amp;dis_t=1772720544&amp;m=50dd7ac3af19bb1fce59387ba6f31409&amp;sha256=f166428715eb2d9500a6e0c7112456bdf6fd867b6ae12b7f55d8116bb96a4050" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="BAPORSSA/巴宝莎时尚素颜镜美妆太阳镜防紫外线墨镜气质眼镜大框太阳镜高级不挑脸型" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53oya32aab5iacyvnia5urw5qexv3adpka.f0.mp4?dis_k=40f93cbbd882ba56d92969e4ac82bf62&amp;dis_t=1772720544&amp;m=50dd7ac3af19bb1fce59387ba6f31409&amp;sha256=f166428715eb2d9500a6e0c7112456bdf6fd867b6ae12b7f55d8116bb96a4050" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3pubzqaadmiaf76fyhfurs7ietb6qhgca.f0.mp4?dis_k=6cb03af3acac80858ac2183ff87339ad&amp;dis_t=1773913901&amp;m=3234d27811ac4c8086b63634d507c03f&amp;sha256=535358de5c0b3324ce50ade346631fc0b961cb73e5dd1d51d167292cba98b147" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="中单于荣光同款板材方框高级感墨镜男士开车专用高清太阳镜2205高清墨镜" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3pubzqaadmiaf76fyhfurs7ietb6qhgca.f0.mp4?dis_k=6cb03af3acac80858ac2183ff87339ad&amp;dis_t=1773913901&amp;m=3234d27811ac4c8086b63634d507c03f&amp;sha256=535358de5c0b3324ce50ade346631fc0b961cb73e5dd1d51d167292cba98b147" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #4</span>
+          <span class="origin-rank">原始排序 #7</span>
         </div>
-        <h3 class="name">BAPORSSA/巴宝莎时尚素颜镜美妆太阳镜防紫外线墨镜气质眼镜大框太阳镜高级不挑脸型</h3>
-        <div class="spu">28841286<br/>Baporssa轻奢墨镜</div>
+        <h3 class="name">中单于荣光同款板材方框高级感墨镜男士开车专用高清太阳镜2205高清墨镜</h3>
+        <div class="spu">986319276985321325<br/>中单方形男太阳镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.81</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.32</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>197.72</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>1.75%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53oya32aab5iacyvnia5urw5qexv3adpka.f0.mp4?dis_k=40f93cbbd882ba56d92969e4ac82bf62&amp;dis_t=1772720544&amp;m=50dd7ac3af19bb1fce59387ba6f31409&amp;sha256=f166428715eb2d9500a6e0c7112456bdf6fd867b6ae12b7f55d8116bb96a4050" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3pubzqaadmiaf76fyhfurs7ietb6qhgca.f0.mp4?dis_k=6cb03af3acac80858ac2183ff87339ad&amp;dis_t=1773913901&amp;m=3234d27811ac4c8086b63634d507c03f&amp;sha256=535358de5c0b3324ce50ade346631fc0b961cb73e5dd1d51d167292cba98b147" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1507,25 +1215,26 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-2">2</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53a4afuaaaryaftx6n3rurubyelidqawsa.f0.mp4?dis_k=8bff9401f8bc1edab75025ce46362c46&amp;dis_t=1775043485&amp;m=ca2d426d4d16b4cbc4822787bb054f7f&amp;sha256=051c7ac6f97bb3fc9da48164ca3192f66bc671ad8f49520ba47dabd56bca58b7" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="BAPORSSA/巴宝莎轻薄素颜美妆老花镜时尚防蓝光护眼老视镜无框便携轻巧佩戴无感轻奢修颜" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53a4afuaaaryaftx6n3rurubyelidqawsa.f0.mp4?dis_k=8bff9401f8bc1edab75025ce46362c46&amp;dis_t=1775043485&amp;m=ca2d426d4d16b4cbc4822787bb054f7f&amp;sha256=051c7ac6f97bb3fc9da48164ca3192f66bc671ad8f49520ba47dabd56bca58b7" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53b4aryaabaqaawun65burwdyedqhqchca.f0.mp4?dis_k=78c119369e1e861188cf536a7cf8c0f6&amp;dis_t=1774132437&amp;m=7f3200d07df4874c2bca50f5ba1dcbc1&amp;sha256=14cb74cdf6793b30739c430586811229d6176ed4633c6ccf7d8409bf98774fb1" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="【时尚百搭】防蓝光老花镜中老年高清男女超清时尚便携超轻老花镜" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53b4aryaabaqaawun65burwdyedqhqchca.f0.mp4?dis_k=78c119369e1e861188cf536a7cf8c0f6&amp;dis_t=1774132437&amp;m=7f3200d07df4874c2bca50f5ba1dcbc1&amp;sha256=14cb74cdf6793b30739c430586811229d6176ed4633c6ccf7d8409bf98774fb1" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #5</span>
+          <span class="origin-rank">原始排序 #8</span>
         </div>
-        <h3 class="name">BAPORSSA/巴宝莎轻薄素颜美妆老花镜时尚防蓝光护眼老视镜无框便携轻巧佩戴无感轻奢修颜</h3>
-        <div class="spu">519715513<br/>巴宝莎老花眼镜</div>
+        <h3 class="name">【时尚百搭】防蓝光老花镜中老年高清男女超清时尚便携超轻老花镜</h3>
+        <div class="spu">7417767866911045764<br/>圆形男女通用老花眼镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.62</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>1.97</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>39.48</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>12.23%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53a4afuaaaryaftx6n3rurubyelidqawsa.f0.mp4?dis_k=8bff9401f8bc1edab75025ce46362c46&amp;dis_t=1775043485&amp;m=ca2d426d4d16b4cbc4822787bb054f7f&amp;sha256=051c7ac6f97bb3fc9da48164ca3192f66bc671ad8f49520ba47dabd56bca58b7" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53b4aryaabaqaawun65burwdyedqhqchca.f0.mp4?dis_k=78c119369e1e861188cf536a7cf8c0f6&amp;dis_t=1774132437&amp;m=7f3200d07df4874c2bca50f5ba1dcbc1&amp;sha256=14cb74cdf6793b30739c430586811229d6176ed4633c6ccf7d8409bf98774fb1" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1534,25 +1243,26 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-3">3</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3yuaseaabb4af43djhnurxrieelcqcisa.f0.mp4?dis_k=d2a73f3d7d07a8f60fd8e4d4f885e7d2&amp;dis_t=1774590286&amp;m=5b88165519ad7f885135782f7412511e&amp;sha256=7dd0ad3dafb00c4e096cab9f45458414e19fa4475ec8d9bef60eec057ab2416e" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="超清防蓝光高档老花镜时尚简约显年轻优雅大气" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3yuaseaabb4af43djhnurxrieelcqcisa.f0.mp4?dis_k=d2a73f3d7d07a8f60fd8e4d4f885e7d2&amp;dis_t=1774590286&amp;m=5b88165519ad7f885135782f7412511e&amp;sha256=7dd0ad3dafb00c4e096cab9f45458414e19fa4475ec8d9bef60eec057ab2416e" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc37abcqaacjaagy6nl65urr6aefd4aekca.f0.mp4?dis_k=0d9fda4736e1fa0fab4a0d557810a733&amp;dis_t=1772700861&amp;m=69723806d4cc27b265d41c741e70d510&amp;sha256=860d7e04ccfd4eeb238a61bce2c2d0bef870e1bc80d28fce7e0e94c5b43d59bf" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="BAPORSSA/巴宝莎时尚素颜镜美妆太阳镜防紫外线墨镜气质大框太阳镜轻奢不挑脸型" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc37abcqaacjaagy6nl65urr6aefd4aekca.f0.mp4?dis_k=0d9fda4736e1fa0fab4a0d557810a733&amp;dis_t=1772700861&amp;m=69723806d4cc27b265d41c741e70d510&amp;sha256=860d7e04ccfd4eeb238a61bce2c2d0bef870e1bc80d28fce7e0e94c5b43d59bf" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #6</span>
+          <span class="origin-rank">原始排序 #11</span>
         </div>
-        <h3 class="name">超清防蓝光高档老花镜时尚简约显年轻优雅大气</h3>
-        <div class="spu">274673461<br/>麦子眼镜优选</div>
+        <h3 class="name">BAPORSSA/巴宝莎时尚素颜镜美妆太阳镜防紫外线墨镜气质大框太阳镜轻奢不挑脸型</h3>
+        <div class="spu">1537477417983034253<br/>巴宝莎/BAPORSSA太阳镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.60</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-19.98%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.75</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>79.00</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>5.17%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3yuaseaabb4af43djhnurxrieelcqcisa.f0.mp4?dis_k=d2a73f3d7d07a8f60fd8e4d4f885e7d2&amp;dis_t=1774590286&amp;m=5b88165519ad7f885135782f7412511e&amp;sha256=7dd0ad3dafb00c4e096cab9f45458414e19fa4475ec8d9bef60eec057ab2416e" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc37abcqaacjaagy6nl65urr6aefd4aekca.f0.mp4?dis_k=0d9fda4736e1fa0fab4a0d557810a733&amp;dis_t=1772700861&amp;m=69723806d4cc27b265d41c741e70d510&amp;sha256=860d7e04ccfd4eeb238a61bce2c2d0bef870e1bc80d28fce7e0e94c5b43d59bf" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1561,26 +1271,25 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-normal">4</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3pabhoaacpeag43kcvfubq6aeo54ae52a.f0.mp4?dis_k=717c1117fc20e380698cba8077b739a5&amp;dis_t=1754726568&amp;sha256=81d823ad192cf418ae1cbac4cdefbbf3f94a58370d7ff27ba6d5680cab9f6252&amp;m=4fd38be43d5c2f6cf1c4b4638cb41ecf" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="[高清偏光]太阳镜护眼高定细闪自带妆容感时尚墨镜防紫外线显脸小太阳镜" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3pabhoaacpeag43kcvfubq6aeo54ae52a.f0.mp4?dis_k=717c1117fc20e380698cba8077b739a5&amp;dis_t=1754726568&amp;sha256=81d823ad192cf418ae1cbac4cdefbbf3f94a58370d7ff27ba6d5680cab9f6252&amp;m=4fd38be43d5c2f6cf1c4b4638cb41ecf" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
+      <a class="media-box" href="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/6976d0050004bb191bb4ee92c30876150000008d00004eec?ck=076b13725d0bcd2b962b633c0d356964&amp;m=076b13725d0bcd2b962b633c0d356964&amp;sha256=3113537cf469b201eb1cbf57522229b2dd3518fea1a2a03cb9671a6deeaed6d6" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+        <img class="media-img" src="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/6976d0050004bb191bb4ee92c30876150000008d00004eec?ck=076b13725d0bcd2b962b633c0d356964&amp;m=076b13725d0bcd2b962b633c0d356964&amp;sha256=3113537cf469b201eb1cbf57522229b2dd3518fea1a2a03cb9671a6deeaed6d6" alt="Mar.轻便光学镜-C(含镜片) 远视/近视眼镜男女同款配眼镜片" loading="lazy" referrerpolicy="no-referrer" />
+        <span class="media-tag image">图片素材</span>
+      </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #9</span>
+          <span class="origin-rank">原始排序 #14</span>
         </div>
-        <h3 class="name">[高清偏光]太阳镜护眼高定细闪自带妆容感时尚墨镜防紫外线显脸小太阳镜</h3>
-        <div class="spu">78044309<br/>美琳轻奢太阳墨镜</div>
+        <h3 class="name">Mar.轻便光学镜-C(含镜片) 远视/近视眼镜男女同款配眼镜片</h3>
+        <div class="spu">2474143145508493855<br/>男女通用近视眼镜/光学眼镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.06</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>0.60</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>391.20</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>0%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3pabhoaacpeag43kcvfubq6aeo54ae52a.f0.mp4?dis_k=717c1117fc20e380698cba8077b739a5&amp;dis_t=1754726568&amp;sha256=81d823ad192cf418ae1cbac4cdefbbf3f94a58370d7ff27ba6d5680cab9f6252&amp;m=4fd38be43d5c2f6cf1c4b4638cb41ecf" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
+          <a class="action primary" href="https://pgdt.gtimg.cn/141/20204/snscosdownload/SZ/reserved/6976d0050004bb191bb4ee92c30876150000008d00004eec?ck=076b13725d0bcd2b962b633c0d356964&amp;m=076b13725d0bcd2b962b633c0d356964&amp;sha256=3113537cf469b201eb1cbf57522229b2dd3518fea1a2a03cb9671a6deeaed6d6" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <span class="action ghost">图片直链</span>
         </div>
       </div>
     </article>
@@ -1588,25 +1297,26 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-normal">5</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3cabskaadbualr6viofurseaeeuiagjka.f0.mp4?dis_k=41a35db7ea4d7f340914463f2927e89f&amp;dis_t=1772854574&amp;m=dc978f99193ced8e74dce6bbc4f43cb3&amp;sha256=63e673c3a7dfcec6560308f086b0b722834648ea8ab5fd5b9d934fc4d956d65b" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="李若彤同款Baporssa新款时髦前卫未来风一体式无框太阳镜猫眼时髦眼镜高级感墨镜" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3cabskaadbualr6viofurseaeeuiagjka.f0.mp4?dis_k=41a35db7ea4d7f340914463f2927e89f&amp;dis_t=1772854574&amp;m=dc978f99193ced8e74dce6bbc4f43cb3&amp;sha256=63e673c3a7dfcec6560308f086b0b722834648ea8ab5fd5b9d934fc4d956d65b" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53x4bqwaadhuam55vxy5urtpyebo7qgc2a.f0.mp4?dis_k=37233e1b699de43ce65611434f663ff7&amp;dis_t=1773454733&amp;m=409c3747bee9e9c096eb7c7eec85272b&amp;sha256=01de290d776190624c8f1610e3e01d3a5a1be7551a77f9a3613a424365ec8ebb" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="时尚百搭墨镜素颜度假风休闲街拍高质感太阳镜猫眼框" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53x4bqwaadhuam55vxy5urtpyebo7qgc2a.f0.mp4?dis_k=37233e1b699de43ce65611434f663ff7&amp;dis_t=1773454733&amp;m=409c3747bee9e9c096eb7c7eec85272b&amp;sha256=01de290d776190624c8f1610e3e01d3a5a1be7551a77f9a3613a424365ec8ebb" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #13</span>
+          <span class="origin-rank">原始排序 #19</span>
         </div>
-        <h3 class="name">李若彤同款Baporssa新款时髦前卫未来风一体式无框太阳镜猫眼时髦眼镜高级感墨镜</h3>
-        <div class="spu">627915<br/>巴宝莎韩老板</div>
+        <h3 class="name">时尚百搭墨镜素颜度假风休闲街拍高质感太阳镜猫眼框</h3>
+        <div class="spu">3556467813879923139<br/>猫眼形男太阳镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>3.09</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.42</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>79.00</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>5.88%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3cabskaadbualr6viofurseaeeuiagjka.f0.mp4?dis_k=41a35db7ea4d7f340914463f2927e89f&amp;dis_t=1772854574&amp;m=dc978f99193ced8e74dce6bbc4f43cb3&amp;sha256=63e673c3a7dfcec6560308f086b0b722834648ea8ab5fd5b9d934fc4d956d65b" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53x4bqwaadhuam55vxy5urtpyebo7qgc2a.f0.mp4?dis_k=37233e1b699de43ce65611434f663ff7&amp;dis_t=1773454733&amp;m=409c3747bee9e9c096eb7c7eec85272b&amp;sha256=01de290d776190624c8f1610e3e01d3a5a1be7551a77f9a3613a424365ec8ebb" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1615,25 +1325,26 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-normal">6</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53j4ahsaaauaaipl6alvurutyepfhqa6ka.f0.mp4?dis_k=298d3887b6355c3bca950db13d6a4981&amp;dis_t=1774255866&amp;m=a7b8905ecbf4a1eb494713842d30f076&amp;sha256=c97ebc34afd3ac9bee45ca0c39c04f44e39733fa6c6aeb7760383aeb304295f9" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="巴宝莎Baporssa时尚猫眼高级感太阳镜修饰脸型高清尼龙镜片防晒百搭" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53j4ahsaaauaaipl6alvurutyepfhqa6ka.f0.mp4?dis_k=298d3887b6355c3bca950db13d6a4981&amp;dis_t=1774255866&amp;m=a7b8905ecbf4a1eb494713842d30f076&amp;sha256=c97ebc34afd3ac9bee45ca0c39c04f44e39733fa6c6aeb7760383aeb304295f9" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53umb3saadwiaf3rwdanurtiyexgrqhoka.f0.mp4?dis_k=b01cbb5020639c3ac3a46ecb144ea2cb&amp;dis_t=1774248985&amp;m=a77b9efc2d7cc3ce8b1fef884cbd6ece" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="高档变色老花镜男时尚显年轻老花眼镜中老年高清防蓝光抗疲劳235" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53umb3saadwiaf3rwdanurtiyexgrqhoka.f0.mp4?dis_k=b01cbb5020639c3ac3a46ecb144ea2cb&amp;dis_t=1774248985&amp;m=a77b9efc2d7cc3ce8b1fef884cbd6ece" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #23</span>
+          <span class="origin-rank">原始排序 #39</span>
         </div>
-        <h3 class="name">巴宝莎Baporssa时尚猫眼高级感太阳镜修饰脸型高清尼龙镜片防晒百搭</h3>
-        <div class="spu">627748<br/>Baporssa眼镜</div>
+        <h3 class="name">高档变色老花镜男时尚显年轻老花眼镜中老年高清防蓝光抗疲劳235</h3>
+        <div class="spu">2254740224588699424<br/>男老花眼镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.40</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.24</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>59.00</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>5.56%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53j4ahsaaauaaipl6alvurutyepfhqa6ka.f0.mp4?dis_k=298d3887b6355c3bca950db13d6a4981&amp;dis_t=1774255866&amp;m=a7b8905ecbf4a1eb494713842d30f076&amp;sha256=c97ebc34afd3ac9bee45ca0c39c04f44e39733fa6c6aeb7760383aeb304295f9" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53umb3saadwiaf3rwdanurtiyexgrqhoka.f0.mp4?dis_k=b01cbb5020639c3ac3a46ecb144ea2cb&amp;dis_t=1774248985&amp;m=a77b9efc2d7cc3ce8b1fef884cbd6ece" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1642,25 +1353,26 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-normal">7</div>
       
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53haaayaaap4aj5yzganuruoaebq4aadca.f0.mp4?dis_k=a99f63c6d9e9d268526efe3eb843934e&amp;dis_t=1766988721&amp;m=534c9aa4b6dbbdcd9afd6c44a1fcc0f8&amp;sha256=b7ff19328967c593e9a09c1200118027642dff44516eb81e16337461d851fe74" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="攸迪卡时尚日夜多用太阳镜防紫外线墨镜" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53haaayaaap4aj5yzganuruoaebq4aadca.f0.mp4?dis_k=a99f63c6d9e9d268526efe3eb843934e&amp;dis_t=1766988721&amp;m=534c9aa4b6dbbdcd9afd6c44a1fcc0f8&amp;sha256=b7ff19328967c593e9a09c1200118027642dff44516eb81e16337461d851fe74" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53fyb5iaad54afhgwazfurslqe2qxahvca.f0.mp4?dis_k=a07abd722972bf8f3e18311e55620d19&amp;dis_t=1774421961&amp;m=cffc0df2655ab5e26732100117c0a3e5" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="高档变色老花镜男时尚显年轻老花眼镜中老年高清防蓝光抗疲劳2-235" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53fyb5iaad54afhgwazfurslqe2qxahvca.f0.mp4?dis_k=a07abd722972bf8f3e18311e55620d19&amp;dis_t=1774421961&amp;m=cffc0df2655ab5e26732100117c0a3e5" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
     </a>
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #26</span>
+          <span class="origin-rank">原始排序 #57</span>
         </div>
-        <h3 class="name">攸迪卡时尚日夜多用太阳镜防紫外线墨镜</h3>
-        <div class="spu">251616095<br/>攸迪卡高端眼镜</div>
+        <h3 class="name">高档变色老花镜男时尚显年轻老花眼镜中老年高清防蓝光抗疲劳2-235</h3>
+        <div class="spu">2254740224588699424<br/>男老花眼镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.67</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.30</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>59.75</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>8.33%</strong></div>
         </div>
         <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53haaayaaap4aj5yzganuruoaebq4aadca.f0.mp4?dis_k=a99f63c6d9e9d268526efe3eb843934e&amp;dis_t=1766988721&amp;m=534c9aa4b6dbbdcd9afd6c44a1fcc0f8&amp;sha256=b7ff19328967c593e9a09c1200118027642dff44516eb81e16337461d851fe74" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53fyb5iaad54afhgwazfurslqe2qxahvca.f0.mp4?dis_k=a07abd722972bf8f3e18311e55620d19&amp;dis_t=1774421961&amp;m=cffc0df2655ab5e26732100117c0a3e5" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -1669,8 +1381,64 @@
     <article class="card" data-category="眼镜">
       <div class="rank rank-normal">8</div>
       
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3yaaaiaaamyaedu3grrurvqaeataaabca.f0.mp4?dis_k=2734190e456a591ef01de85d65414b8e&amp;dis_t=1768310186&amp;m=1c1035d77c1247d95daa1ec3c731661c" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="BAPORSSA/巴宝莎新款时髦未来风一体式墨镜无边框太阳镜修饰脸型" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3yaaaiaaamyaedu3grrurvqaeataaabca.f0.mp4?dis_k=2734190e456a591ef01de85d65414b8e&amp;dis_t=1768310186&amp;m=1c1035d77c1247d95daa1ec3c731661c" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+      <span class="play-badge">▶</span>
+      <span class="media-tag video">视频商品图</span>
+    </a>
+      <div class="content">
+        <div class="category-row">
+          <span class="pill">眼镜</span>
+          <span class="origin-rank">原始排序 #70</span>
+        </div>
+        <h3 class="name">BAPORSSA/巴宝莎新款时髦未来风一体式墨镜无边框太阳镜修饰脸型</h3>
+        <div class="spu">1537477417983034253<br/>巴宝莎/BAPORSSA太阳镜</div>
+        <div class="metrics">
+          <div class="metric"><span>下单ROI</span><strong>1.10</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>238.00</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>0%</strong></div>
+        </div>
+        <div class="actions">
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3yaaaiaaamyaedu3grrurvqaeataaabca.f0.mp4?dis_k=2734190e456a591ef01de85d65414b8e&amp;dis_t=1768310186&amp;m=1c1035d77c1247d95daa1ec3c731661c" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <span class="action ghost">视频直链</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-category="眼镜">
+      <div class="rank rank-normal">9</div>
+      
+    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53tub5caad4maavmnysjurthie2goqhuka.f0.mp4?dis_k=4ff9adbed6f1ed32d12eadf1fbe5da30&amp;dis_t=1773919111&amp;m=dc1705b450aa63867242700df295c196" target="_blank" rel="noopener noreferrer" title="点击打开素材">
+      <img class="media-thumb" alt="[设计师新款]男士墨镜开车驾驶防晒防紫外线强光太阳镜322-1" loading="lazy" referrerpolicy="no-referrer" />
+      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53tub5caad4maavmnysjurthie2goqhuka.f0.mp4?dis_k=4ff9adbed6f1ed32d12eadf1fbe5da30&amp;dis_t=1773919111&amp;m=dc1705b450aa63867242700df295c196" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
+      <span class="play-badge">▶</span>
+      <span class="media-tag video">视频商品图</span>
+    </a>
+      <div class="content">
+        <div class="category-row">
+          <span class="pill">眼镜</span>
+          <span class="origin-rank">原始排序 #71</span>
+        </div>
+        <h3 class="name">[设计师新款]男士墨镜开车驾驶防晒防紫外线强光太阳镜322-1</h3>
+        <div class="spu">3196093912089903762<br/>男太阳镜</div>
+        <div class="metrics">
+          <div class="metric"><span>下单ROI</span><strong>1.70</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>60.67</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>0%</strong></div>
+        </div>
+        <div class="actions">
+          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53tub5caad4maavmnysjurthie2goqhuka.f0.mp4?dis_k=4ff9adbed6f1ed32d12eadf1fbe5da30&amp;dis_t=1773919111&amp;m=dc1705b450aa63867242700df295c196" target="_blank" rel="noopener noreferrer">打开素材</a>
+          <span class="action ghost">视频直链</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-category="眼镜">
+      <div class="rank rank-normal">10</div>
+      
     <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53bmasyaabseadxoqwxjurwcyefqfqclca.f0.mp4?dis_k=0eba9a7a8963b2e41f8f3f1673f4f772&amp;dis_t=1763121417&amp;m=d6e5e23c9e065bd893244e1e1642c7d6&amp;sha256=b2a321dc4b7bb632f03d48dc2be0f4d50c19091d0f951fef090cb79ed1f81fc7" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="【明星同款】宝朴户外钓鱼专用偏光太阳镜可调节抗冲击路亚" loading="lazy" referrerpolicy="no-referrer" />
+      <img class="media-thumb" alt="宝朴钓鱼眼镜看鱼看水底防晒路亚刺鱼大师级飞行员眼镜刺鱼看漂" loading="lazy" referrerpolicy="no-referrer" />
       <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53bmasyaabseadxoqwxjurwcyefqfqclca.f0.mp4?dis_k=0eba9a7a8963b2e41f8f3f1673f4f772&amp;dis_t=1763121417&amp;m=d6e5e23c9e065bd893244e1e1642c7d6&amp;sha256=b2a321dc4b7bb632f03d48dc2be0f4d50c19091d0f951fef090cb79ed1f81fc7" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
       <span class="play-badge">▶</span>
       <span class="media-tag video">视频商品图</span>
@@ -1678,340 +1446,17 @@
       <div class="content">
         <div class="category-row">
           <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #36</span>
+          <span class="origin-rank">原始排序 #77</span>
         </div>
-        <h3 class="name">【明星同款】宝朴户外钓鱼专用偏光太阳镜可调节抗冲击路亚</h3>
-        <div class="spu">29744965<br/>宝朴BAOPU钓鱼专用太阳镜</div>
+        <h3 class="name">宝朴钓鱼眼镜看鱼看水底防晒路亚刺鱼大师级飞行员眼镜刺鱼看漂</h3>
+        <div class="spu">3042343832139100797<br/>宝朴太阳镜</div>
         <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>3.56</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-8.33%%</strong></div>
+          <div class="metric"><span>下单ROI</span><strong>2.08</strong></div>
+          <div class="metric"><span>下单单价(元)</span><strong>199.00</strong></div>
+          <div class="metric"><span>24小时发起退款率</span><strong>0%</strong></div>
         </div>
         <div class="actions">
           <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53bmasyaabseadxoqwxjurwcyefqfqclca.f0.mp4?dis_k=0eba9a7a8963b2e41f8f3f1673f4f772&amp;dis_t=1763121417&amp;m=d6e5e23c9e065bd893244e1e1642c7d6&amp;sha256=b2a321dc4b7bb632f03d48dc2be0f4d50c19091d0f951fef090cb79ed1f81fc7" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="眼镜">
-      <div class="rank rank-normal">9</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3t4abmaaay4abwbfzbfurvhyec2pqafsa.f0.mp4?dis_k=78d3f8dfcf1f9413bdf42173474bdedb&amp;dis_t=1773735284&amp;m=2d7103e8c7e6de6f740b60a46b54a180&amp;sha256=3ce36380dbd35fe0ba770058e58a89d686ae9a0db121ac1c068b21d00004df40" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="时尚百搭墨镜素颜度假风休闲街拍高质感太阳镜猫眼框" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3t4abmaaay4abwbfzbfurvhyec2pqafsa.f0.mp4?dis_k=78d3f8dfcf1f9413bdf42173474bdedb&amp;dis_t=1773735284&amp;m=2d7103e8c7e6de6f740b60a46b54a180&amp;sha256=3ce36380dbd35fe0ba770058e58a89d686ae9a0db121ac1c068b21d00004df40" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #45</span>
-        </div>
-        <h3 class="name">时尚百搭墨镜素颜度假风休闲街拍高质感太阳镜猫眼框</h3>
-        <div class="spu">175156716<br/>猫眼形男太阳镜</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.97</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-16.84%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3t4abmaaay4abwbfzbfurvhyec2pqafsa.f0.mp4?dis_k=78d3f8dfcf1f9413bdf42173474bdedb&amp;dis_t=1773735284&amp;m=2d7103e8c7e6de6f740b60a46b54a180&amp;sha256=3ce36380dbd35fe0ba770058e58a89d686ae9a0db121ac1c068b21d00004df40" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="眼镜">
-      <div class="rank rank-normal">10</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53yaankaaazaaikfn3fvurvqae2xaabvka.f0.mp4?dis_k=5080b27d8e50dd4a66df955c4b0ecbda&amp;dis_t=1773903057&amp;m=53f092c66fea62fc6e2d736c7d12b18a&amp;sha256=b307ef1aa975ab77c6984cce15fc90da80ef437fcce6e86e2698a2d01ed4fc94" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="黑框变色老花镜" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53yaankaaazaaikfn3fvurvqae2xaabvka.f0.mp4?dis_k=5080b27d8e50dd4a66df955c4b0ecbda&amp;dis_t=1773903057&amp;m=53f092c66fea62fc6e2d736c7d12b18a&amp;sha256=b307ef1aa975ab77c6984cce15fc90da80ef437fcce6e86e2698a2d01ed4fc94" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">眼镜</span>
-          <span class="origin-rank">原始排序 #53</span>
-        </div>
-        <h3 class="name">黑框变色老花镜</h3>
-        <div class="spu">150977104<br/>男老花眼镜</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.29</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+67.26%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53yaankaaazaaikfn3fvurvqae2xaabvka.f0.mp4?dis_k=5080b27d8e50dd4a66df955c4b0ecbda&amp;dis_t=1773903057&amp;m=53f092c66fea62fc6e2d736c7d12b18a&amp;sha256=b307ef1aa975ab77c6984cce15fc90da80ef437fcce6e86e2698a2d01ed4fc94" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-1">1</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3zebw4aadlyafjz6nuburtsien3eqg3sa.f0.mp4?dis_k=25b2460dda11234ce63bfc6f66c3e503&amp;dis_t=1775123643&amp;m=dfc81627a322d9fc810b589795875f1f&amp;sha256=d6c5506fb37a24e88ab6d18539eb7c7a32e53e2179cbcf047da5f4c0348ce5ce" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="爆款塑身女士收腹腰带H" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3zebw4aadlyafjz6nuburtsien3eqg3sa.f0.mp4?dis_k=25b2460dda11234ce63bfc6f66c3e503&amp;dis_t=1775123643&amp;m=dfc81627a322d9fc810b589795875f1f&amp;sha256=d6c5506fb37a24e88ab6d18539eb7c7a32e53e2179cbcf047da5f4c0348ce5ce" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #10</span>
-        </div>
-        <h3 class="name">爆款塑身女士收腹腰带H</h3>
-        <div class="spu">215121416<br/>塑身腰封/腰夹</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.91</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-20.12%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3zebw4aadlyafjz6nuburtsien3eqg3sa.f0.mp4?dis_k=25b2460dda11234ce63bfc6f66c3e503&amp;dis_t=1775123643&amp;m=dfc81627a322d9fc810b589795875f1f&amp;sha256=d6c5506fb37a24e88ab6d18539eb7c7a32e53e2179cbcf047da5f4c0348ce5ce" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-2">2</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc354cguaaefqabpp6plvur53yenlxqi2sa.f0.mp4?dis_k=6c2dfbd4259c97b85107c3d95df094f6&amp;dis_t=1774943805&amp;m=118c26634914c54eeb3389c95c65c6df&amp;sha256=326a96cf6db6d2332d22105136321ea3c2ebfc1d41eee39027d237a5148ae654" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="爆款塑身收腹腰带" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc354cguaaefqabpp6plvur53yenlxqi2sa.f0.mp4?dis_k=6c2dfbd4259c97b85107c3d95df094f6&amp;dis_t=1774943805&amp;m=118c26634914c54eeb3389c95c65c6df&amp;sha256=326a96cf6db6d2332d22105136321ea3c2ebfc1d41eee39027d237a5148ae654" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #18</span>
-        </div>
-        <h3 class="name">爆款塑身收腹腰带</h3>
-        <div class="spu">215121416<br/>塑身腰封/腰夹</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.80</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-2.25%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc354cguaaefqabpp6plvur53yenlxqi2sa.f0.mp4?dis_k=6c2dfbd4259c97b85107c3d95df094f6&amp;dis_t=1774943805&amp;m=118c26634914c54eeb3389c95c65c6df&amp;sha256=326a96cf6db6d2332d22105136321ea3c2ebfc1d41eee39027d237a5148ae654" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-3">3</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3dmce6aae3yafpf6oo5ur4gyej4nqit2a.f0.mp4?dis_k=a795e0f5a7c66927b96133b15b59a6fd&amp;dis_t=1774852303&amp;m=5f0c78486c84b7336f430e2f146e0670" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="女式收腹腰带健身收腹运动护腰带" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3dmce6aae3yafpf6oo5ur4gyej4nqit2a.f0.mp4?dis_k=a795e0f5a7c66927b96133b15b59a6fd&amp;dis_t=1774852303&amp;m=5f0c78486c84b7336f430e2f146e0670" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #60</span>
-        </div>
-        <h3 class="name">女式收腹腰带健身收腹运动护腰带</h3>
-        <div class="spu">2979393<br/>运动护腰</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.03</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-5.20%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3dmce6aae3yafpf6oo5ur4gyej4nqit2a.f0.mp4?dis_k=a795e0f5a7c66927b96133b15b59a6fd&amp;dis_t=1774852303&amp;m=5f0c78486c84b7336f430e2f146e0670" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">4</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53bicegaaenaaocoopsvur4cqeimfaiq2a.f0.mp4?dis_k=db13591f722f7791e51d6a652e1f27f3&amp;dis_t=1775204884&amp;m=bc5bedcbdcab6f5bde936a2f3bef6496&amp;sha256=06de1a59d6dc16a8e65d38d6f934b90a78805ff5606b014f451fc1be0a3669bc" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="女士收腹腰带收腹运动护腰" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53bicegaaenaaocoopsvur4cqeimfaiq2a.f0.mp4?dis_k=db13591f722f7791e51d6a652e1f27f3&amp;dis_t=1775204884&amp;m=bc5bedcbdcab6f5bde936a2f3bef6496&amp;sha256=06de1a59d6dc16a8e65d38d6f934b90a78805ff5606b014f451fc1be0a3669bc" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #93</span>
-        </div>
-        <h3 class="name">女士收腹腰带收腹运动护腰</h3>
-        <div class="spu">2979393<br/>运动护腰</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.06</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-29.92%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53bicegaaenaaocoopsvur4cqeimfaiq2a.f0.mp4?dis_k=db13591f722f7791e51d6a652e1f27f3&amp;dis_t=1775204884&amp;m=bc5bedcbdcab6f5bde936a2f3bef6496&amp;sha256=06de1a59d6dc16a8e65d38d6f934b90a78805ff5606b014f451fc1be0a3669bc" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">5</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b532ibbqaackyaevt5zb5urruqeddjaegca.f0.mp4?dis_k=8a9bd727a4aebfc6d546eb6a43208e3e&amp;dis_t=1773992503&amp;m=323460e09b0312b3b9b2f16fc93471ab&amp;sha256=ddadd6215fef951db6110115b3607ca563040012d3a6189ae08f63d5537a12e9" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="【成功男人皮带】新款男士腰带针扣经典商务休闲皮带时尚百搭WY" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b532ibbqaackyaevt5zb5urruqeddjaegca.f0.mp4?dis_k=8a9bd727a4aebfc6d546eb6a43208e3e&amp;dis_t=1773992503&amp;m=323460e09b0312b3b9b2f16fc93471ab&amp;sha256=ddadd6215fef951db6110115b3607ca563040012d3a6189ae08f63d5537a12e9" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #98</span>
-        </div>
-        <h3 class="name">【成功男人皮带】新款男士腰带针扣经典商务休闲皮带时尚百搭WY</h3>
-        <div class="spu">150804025<br/>男腰带</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.52</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-7.99%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b532ibbqaackyaevt5zb5urruqeddjaegca.f0.mp4?dis_k=8a9bd727a4aebfc6d546eb6a43208e3e&amp;dis_t=1773992503&amp;m=323460e09b0312b3b9b2f16fc93471ab&amp;sha256=ddadd6215fef951db6110115b3607ca563040012d3a6189ae08f63d5537a12e9" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">6</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53qmaqgaabsiae2qgdarurxayeaobqca2a.f0.mp4?dis_k=3e3cb9ae971e09561dce29cebf51304e&amp;dis_t=1774341655&amp;m=9ae8620dc9066057e25f2014f5fdee9b&amp;sha256=3f7969fc72ae5596f5cbf056ed0b1a821bfda213c1002d44308d2c657e4cf0aa" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="Calermkeens国家专利《六年不断》女士皮带自动扣真皮腰带时尚百搭裤带" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53qmaqgaabsiae2qgdarurxayeaobqca2a.f0.mp4?dis_k=3e3cb9ae971e09561dce29cebf51304e&amp;dis_t=1774341655&amp;m=9ae8620dc9066057e25f2014f5fdee9b&amp;sha256=3f7969fc72ae5596f5cbf056ed0b1a821bfda213c1002d44308d2c657e4cf0aa" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #113</span>
-        </div>
-        <h3 class="name">Calermkeens国家专利《六年不断》女士皮带自动扣真皮腰带时尚百搭裤带</h3>
-        <div class="spu">321062130<br/>CalermKeens官方专柜店</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.94</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+∞%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53qmaqgaabsiae2qgdarurxayeaobqca2a.f0.mp4?dis_k=3e3cb9ae971e09561dce29cebf51304e&amp;dis_t=1774341655&amp;m=9ae8620dc9066057e25f2014f5fdee9b&amp;sha256=3f7969fc72ae5596f5cbf056ed0b1a821bfda213c1002d44308d2c657e4cf0aa" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">7</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53bqcacaaeaqajnafsafub4daeaegaiaka.f0.mp4?dis_k=7fc7e3e4d2206635e3f9396115d812ea&amp;dis_t=1756796687&amp;m=d297eeb829c64fa9921b68e785f7ea23" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="十年不断裂《内穿款》男士皮带男复古无夹层真牛皮内穿自动扣裤腰带送爸爸" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53bqcacaaeaqajnafsafub4daeaegaiaka.f0.mp4?dis_k=7fc7e3e4d2206635e3f9396115d812ea&amp;dis_t=1756796687&amp;m=d297eeb829c64fa9921b68e785f7ea23" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #124</span>
-        </div>
-        <h3 class="name">十年不断裂《内穿款》男士皮带男复古无夹层真牛皮内穿自动扣裤腰带送爸爸</h3>
-        <div class="spu">156571794<br/>Calerm Keens腰带/皮带/腰链</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.09</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>0.00%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53bqcacaaeaqajnafsafub4daeaegaiaka.f0.mp4?dis_k=7fc7e3e4d2206635e3f9396115d812ea&amp;dis_t=1756796687&amp;m=d297eeb829c64fa9921b68e785f7ea23" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">8</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3kibw6aadpuani45ylfursuqen5jag32a.f0.mp4?dis_k=caff9880dfb007fc52bf2ecef8dc1747&amp;dis_t=1773910839&amp;m=3f3604a7877499766d19ee4a56bc9280&amp;sha256=90261672ab649a16456082d4a20d464c4c5f184e88b7cc93b669063e0021c609" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="新款男士鳄鱼纹无牙自动扣内穿商务腰带时尚裤腰带个性中年" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0bc3kibw6aadpuani45ylfursuqen5jag32a.f0.mp4?dis_k=caff9880dfb007fc52bf2ecef8dc1747&amp;dis_t=1773910839&amp;m=3f3604a7877499766d19ee4a56bc9280&amp;sha256=90261672ab649a16456082d4a20d464c4c5f184e88b7cc93b669063e0021c609" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #129</span>
-        </div>
-        <h3 class="name">新款男士鳄鱼纹无牙自动扣内穿商务腰带时尚裤腰带个性中年</h3>
-        <div class="spu">148329823<br/>真皮男腰带</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.07</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-17.77%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0bc3kibw6aadpuani45ylfursuqen5jag32a.f0.mp4?dis_k=caff9880dfb007fc52bf2ecef8dc1747&amp;dis_t=1773910839&amp;m=3f3604a7877499766d19ee4a56bc9280&amp;sha256=90261672ab649a16456082d4a20d464c4c5f184e88b7cc93b669063e0021c609" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">9</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53qubwuaadoiaf3vgn2furtbienkcqg2sa.f0.mp4?dis_k=73907088d52a2e16106b966898fc09b5&amp;dis_t=1775122506&amp;m=62302126a705637a74dc3cddc6e4af35&amp;sha256=893a272a2afc98a6e9f526dc811c3461edf7f858bba721036e33d34e7f6deaf2" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="【厂家直销】26新款男士微弹战术腰带百搭休闲帆布皮带户外裤带-LQ" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53qubwuaadoiaf3vgn2furtbienkcqg2sa.f0.mp4?dis_k=73907088d52a2e16106b966898fc09b5&amp;dis_t=1775122506&amp;m=62302126a705637a74dc3cddc6e4af35&amp;sha256=893a272a2afc98a6e9f526dc811c3461edf7f858bba721036e33d34e7f6deaf2" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #141</span>
-        </div>
-        <h3 class="name">【厂家直销】26新款男士微弹战术腰带百搭休闲帆布皮带户外裤带-LQ</h3>
-        <div class="spu">603050438<br/>鳄鱼恤/CROCODILE军迷配饰/作训配饰</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>1.88</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>-30.15%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53qubwuaadoiaf3vgn2furtbienkcqg2sa.f0.mp4?dis_k=73907088d52a2e16106b966898fc09b5&amp;dis_t=1775122506&amp;m=62302126a705637a74dc3cddc6e4af35&amp;sha256=893a272a2afc98a6e9f526dc811c3461edf7f858bba721036e33d34e7f6deaf2" target="_blank" rel="noopener noreferrer">打开素材</a>
-          <span class="action ghost">视频直链</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="card" data-category="皮带">
-      <div class="rank rank-normal">10</div>
-      
-    <a class="media-box video-box" href="https://adsmind.gdtimg.com/ads_svp_video__0b53aabaqaachiacq5ndvzurqaaebaaaecca.f0.mp4?dis_k=ed6a6746302eeb06e37eac6fc8a8636f&amp;dis_t=1772167230&amp;m=34c107b36af5af0b0760d2bc7f175c84" target="_blank" rel="noopener noreferrer" title="点击打开素材">
-      <img class="media-thumb" alt="[开年大促 高品质真牛皮]高档内穿自动扣时尚百搭腰带中青年休闲商务裤带潮w" loading="lazy" referrerpolicy="no-referrer" />
-      <video class="media-video" src="https://adsmind.gdtimg.com/ads_svp_video__0b53aabaqaachiacq5ndvzurqaaebaaaecca.f0.mp4?dis_k=ed6a6746302eeb06e37eac6fc8a8636f&amp;dis_t=1772167230&amp;m=34c107b36af5af0b0760d2bc7f175c84" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video>
-      <span class="play-badge">▶</span>
-      <span class="media-tag video">视频商品图</span>
-    </a>
-      <div class="content">
-        <div class="category-row">
-          <span class="pill">皮带</span>
-          <span class="origin-rank">原始排序 #145</span>
-        </div>
-        <h3 class="name">[开年大促 高品质真牛皮]高档内穿自动扣时尚百搭腰带中青年休闲商务裤带潮w</h3>
-        <div class="spu">150802552<br/>腰带/皮带/腰链</div>
-        <div class="metrics">
-          <div class="metric"><span>下单单价(元)</span><strong>2.64</strong></div>
-          <div class="metric"><span>24小时发起退款率</span><strong>+12.48%%</strong></div>
-        </div>
-        <div class="actions">
-          <a class="action primary" href="https://adsmind.gdtimg.com/ads_svp_video__0b53aabaqaachiacq5ndvzurqaaebaaaecca.f0.mp4?dis_k=ed6a6746302eeb06e37eac6fc8a8636f&amp;dis_t=1772167230&amp;m=34c107b36af5af0b0760d2bc7f175c84" target="_blank" rel="noopener noreferrer">打开素材</a>
           <span class="action ghost">视频直链</span>
         </div>
       </div>
@@ -2025,78 +1470,6 @@
   </div>
 
   <script>
-    // 历史记录加载
-    const CURRENT_DATE = '2026-04-08';
-    const historyPicker = document.getElementById('historyPicker');
-
-    async function loadHistoryIndex() {
-      try {
-        const res = await fetch('history/index.json?t=' + Date.now());
-        if (!res.ok) return;
-        const dates = await res.json();
-        dates.forEach(d => {
-          if (d === CURRENT_DATE) return;
-          const opt = document.createElement('option');
-          opt.value = d;
-          opt.textContent = d;
-          historyPicker.appendChild(opt);
-        });
-      } catch (e) { console.warn('加载历史索引失败', e); }
-    }
-
-    function escHtml(str) {
-      return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-    }
-
-    function renderHistoryCard(item, rank) {
-      const link = escHtml(item.mediaUrl || '');
-      const isVideo = item.mediaType === 'video';
-      const mediaHtml = isVideo
-        ? '<a class="media-box video-box" href="' + link + '" target="_blank" rel="noopener noreferrer" title="点击打开素材"><video class="media-video" src="' + link + '" muted playsinline preload="metadata"></video><span class="play-badge">▶</span><span class="media-tag video">视频</span></a>'
-        : '<a class="media-box" href="' + link + '" target="_blank" rel="noopener noreferrer" title="点击打开素材"><img class="media-img" src="' + link + '" alt="' + escHtml(item.name) + '" loading="lazy" referrerpolicy="no-referrer" /><span class="media-tag image">图片</span></a>';
-      const rankClass = rank <= 3 ? 'rank-' + rank : 'rank-normal';
-      return '<article class="card" data-category="' + escHtml(item.category) + '"><div class="rank ' + rankClass + '">' + rank + '</div>' + mediaHtml + '<div class="content"><div class="category-row"><span class="pill">' + escHtml(item.category) + '</span></div><h3 class="name">' + escHtml(item.name) + '</h3><div class="metrics"><div class="metric"><span>下单单价(元)</span><strong>' + escHtml(item.price) + '</strong></div><div class="metric"><span>24小时发起退款率</span><strong>' + escHtml(item.refund) + '%</strong></div></div><div class="actions"><a class="action primary" href="' + escHtml(item.mediaUrl) + '" target="_blank" rel="noopener noreferrer">打开素材</a></div></div></article>';
-    }
-
-    async function loadHistory(date) {
-      if (!date) { location.reload(); return; }
-      try {
-        const res = await fetch('history/' + date + '.json?t=' + Date.now());
-        if (!res.ok) { alert('无法加载 ' + date + ' 的历史数据'); return; }
-        const data = await res.json();
-        document.getElementById('currentDate').textContent = data.updateDate || date;
-        const cats = ['配饰', '眼镜', '皮带'];
-        cats.forEach(cat => {
-          const panel = document.querySelector('[data-panel="' + cat + '"]');
-          if (!panel) return;
-          const grid = panel.querySelector('.grid');
-          if (!grid) return;
-          const items = (data.groups && data.groups[cat]) || [];
-          grid.innerHTML = items.map((item, i) => renderHistoryCard(item, i + 1)).join('');
-        });
-        const allPanel = document.querySelector('[data-panel="全部"]');
-        if (allPanel) {
-          const allGrid = allPanel.querySelector('.grid');
-          if (allGrid) {
-            let allItems = [];
-            cats.forEach(cat => { allItems = allItems.concat((data.groups && data.groups[cat]) || []); });
-            allGrid.innerHTML = allItems.map((item, i) => renderHistoryCard(item, i + 1)).join('');
-          }
-        }
-        // 更新统计数字
-        const summaryItems = document.querySelectorAll('.summary .item strong');
-        if (summaryItems.length >= 4) {
-          const total = cats.reduce((s, c) => s + ((data.groups && data.groups[c]) || []).length, 0);
-          summaryItems[0].textContent = total;
-          summaryItems[1].textContent = ((data.groups && data.groups['配饰']) || []).length;
-          summaryItems[2].textContent = ((data.groups && data.groups['眼镜']) || []).length;
-          summaryItems[3].textContent = ((data.groups && data.groups['皮带']) || []).length;
-        }
-      } catch (e) { alert('加载历史数据失败: ' + e.message); }
-    }
-
-    loadHistoryIndex();
-
     const tabs = Array.from(document.querySelectorAll('.tab'));
     const panels = Array.from(document.querySelectorAll('.panel'));
     tabs.forEach(tab => {
