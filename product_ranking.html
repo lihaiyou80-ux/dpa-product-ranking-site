@@ -1222,13 +1222,28 @@
     }
 
     function renderHistoryCard(item, rank) {
-      const link = escHtml(item.mediaUrl || '');
-      const isVideo = item.mediaType === 'video';
+      const rawLink = item.videoSrc || item.imgSrc || '';
+      const link = escHtml(rawLink);
+      const isVideo = !!item.videoSrc;
+      const nameEsc = escHtml(item.name);
       const mediaHtml = isVideo
-        ? '<a class="media-box video-box" href="' + link + '" target="_blank" rel="noopener noreferrer" title="点击打开素材"><video class="media-video" src="' + link + '" muted playsinline preload="metadata"></video><span class="play-badge">&#9654;</span><span class="media-tag video">视频</span></a>'
-        : '<a class="media-box" href="' + link + '" target="_blank" rel="noopener noreferrer" title="点击打开素材"><img class="media-img" src="' + link + '" alt="' + escHtml(item.name) + '" loading="lazy" referrerpolicy="no-referrer" /><span class="media-tag image">图片</span></a>';
+        ? '<a class="media-box video-box" href="' + link + '" target="_blank" rel="noopener noreferrer" title="点击打开素材"><img class="media-thumb" alt="' + nameEsc + '" loading="lazy" referrerpolicy="no-referrer" /><video class="media-video" src="' + link + '" muted playsinline preload="auto" data-smart-thumb="true" crossorigin="anonymous"></video><span class="play-badge">&#9654;</span><span class="media-tag video">视频商品图</span></a>'
+        : '<a class="media-box" href="' + link + '" target="_blank" rel="noopener noreferrer" title="点击打开素材"><img class="media-img" src="' + link + '" alt="' + nameEsc + '" loading="lazy" referrerpolicy="no-referrer" /><span class="media-tag image">图片商品图</span></a>';
       const rankClass = rank <= 3 ? 'rank-' + rank : 'rank-normal';
-      return '<article class="card" data-category="' + escHtml(item.category) + '"><div class="rank ' + rankClass + '">' + rank + '</div>' + mediaHtml + '<div class="content"><div class="category-row"><span class="pill">' + escHtml(item.category) + '</span></div><h3 class="name">' + escHtml(item.name) + '</h3><div class="metrics"><div class="metric"><span>下单单价(元)</span><strong>' + escHtml(item.price) + '</strong></div><div class="metric"><span>24小时发起退款率</span><strong>' + escHtml(item.refund) + '%</strong></div></div><div class="actions"><a class="action primary" href="' + escHtml(item.mediaUrl) + '" target="_blank" rel="noopener noreferrer">打开素材</a></div></div></article>';
+      let category = item.category || '';
+      let spuId = item.spuId || '';
+      if (!category && typeof item.spu === 'string' && item.spu.indexOf('\n') >= 0) {
+        const parts = item.spu.split('\n');
+        spuId = spuId || parts[0] || '';
+        category = parts[1] || '';
+      }
+      spuId = spuId || (typeof item.spu === 'string' ? item.spu.split('\n')[0] : '');
+      const originRankHtml = (item.rank !== undefined) ? '<span class="origin-rank">原始排序 #' + item.rank + '</span>' : '';
+      const spuHtml = (spuId || category) ? '<div class="spu">' + escHtml(spuId) + '<br/>' + escHtml(category) + '</div>' : '';
+      const refundRaw = String(item.refund == null ? '' : item.refund);
+      const refundTxt = refundRaw === '' ? '' : (/%$/.test(refundRaw) ? escHtml(refundRaw) : escHtml(refundRaw) + '%');
+      const ghostLabel = isVideo ? '视频直链' : '图片直链';
+      return '<article class="card" data-category="' + escHtml(category) + '"><div class="rank ' + rankClass + '">' + rank + '</div>' + mediaHtml + '<div class="content"><div class="category-row"><span class="pill">' + escHtml(category) + '</span>' + originRankHtml + '</div><h3 class="name">' + nameEsc + '</h3>' + spuHtml + '<div class="metrics"><div class="metric"><span>下单单价(元)</span><strong>' + escHtml(item.price) + '</strong></div><div class="metric"><span>24小时发起退款率</span><strong>' + refundTxt + '</strong></div></div><div class="actions"><a class="action primary" href="' + link + '" target="_blank" rel="noopener noreferrer">打开素材</a><span class="action ghost">' + ghostLabel + '</span></div></div></article>';
     }
 
     async function loadHistory(date) {
